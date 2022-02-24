@@ -8,8 +8,7 @@
         "location": "Fred G. Acosta Job Corps Center, Tucson, AZ",
         "notes": "",
         "interviewDate": "01/28/2022",
-        "interviewTime": "03:00 PM",
-        "createdAt": "01/08/2022"
+        "interviewTime": "03:00 PM"
     },
     {
         "companyName": "Universal Logistics Holdings",
@@ -20,8 +19,7 @@
         "location": "1115 W Alameda Dr, Tempe, AZ 85282",
         "notes": "I guess they didn't like me",
         "interviewDate": "12/20/2021",
-        "interviewTime": "01:00 PM",
-        "createdAt": "11/12/2021"
+        "interviewTime": "01:00 PM"
     },
     {
         "companyName": "Kett Engineering",
@@ -32,8 +30,7 @@
         "location": "Kett Engineering in Surprise, AZ 85374",
         "notes": "Didn't have the skills yet",
         "interviewDate": "11/18/2021",
-        "interviewTime": "02:00 PM",
-        "createdAt": "10/20/2021"
+        "interviewTime": "02:00 PM"
     },
     {
         "companyName": "State of Arizona",
@@ -44,7 +41,6 @@
         "location": "Prescott, AZ",
         "notes": "They wanted someone like 007",
         "interviewDate": "08/28/2021",
-        "interviewTime": "05:00 PM",
-        "createdAt": "08/25/2021"
+        "interviewTime": "05:00 PM"
     }
 ]
