@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const dateFormat = require("../utils/dateFormat");
 
 const applicationSchema = new Schema({
     companyName: {
@@ -25,13 +26,17 @@ const applicationSchema = new Schema({
     },
     notes: [
         {
+          noteText: {
             type: String,
+          },
         },
         {
-            createdAt: Date,
+          createdAt: {
+            type: Date,
             default: Date.now,
+          },
         },
-    ],
+      ],
     interviewDate: {
         type: String,
     },
