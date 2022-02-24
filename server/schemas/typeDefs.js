@@ -30,7 +30,7 @@ const typeDefs = gql`
     addApplication(companyName: String!, position: String!, dateApplied: String!,
       dateRejected: String, description: String, location: String,
       interviewDate: String, interviewTime: String): Application
-    addNote(applicationId: ID!, notes: String!): Application
+    addNote(applicationId: ID!, noteText: String!): Application
     removeApplication(applicationId: ID!): Application
     removeNote(applicationId: ID!, noteId: ID!): Application
   }
