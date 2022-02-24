@@ -1,6 +1,7 @@
 import React from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
+import Dashboard from "./components/Dashboard";
 
-const App = () => <PortfolioContainer />;
+
+const App = () => <Dashboard />;
 
 export default App;
