@@ -7,16 +7,6 @@ export const QUERY_APPLICATIONS = gql`
       companyName
       position
       dateApplied
-      rejection
-      dateRejected
-      location
-      notes {
-        noteText
-      }
-      interview
-      interviewDate
-      interviewTime
-      createdAt
     }
   }
 `;
