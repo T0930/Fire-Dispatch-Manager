@@ -24,3 +24,18 @@ ul {
     display: none;
 }
 
+.yayInterview {
+    background-color: white;
+    border: none;
+}
+.booReject {
+    background-color: white;
+    border: none;
+}
+
+.check {
+    color: green;
+}
+.reject {
+    color: red;
+}

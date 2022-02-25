@@ -43,7 +43,7 @@ function NavBar({ currentPage, handlePageChange }) {
                 <h1 className="display-5 fw-bold text-white">My Applications</h1>
             </div>
         </div><div className="row">
-                <div className="col-4">
+                <div className="col-2">
                     <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
                         <CDBSidebar textColor="#fff" backgroundColor="#333">
                             <CDBSidebarHeader>
@@ -101,8 +101,8 @@ function NavBar({ currentPage, handlePageChange }) {
                         </CDBSidebar>
                     </div>
                 </div>
-                <div className="col-8">
-                    <div id="content">
+                <div className="col-9">
+                    <div id="content align-self-end">
 
                         {renderPage()}
 
