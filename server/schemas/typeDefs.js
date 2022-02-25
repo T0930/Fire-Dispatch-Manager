@@ -6,10 +6,12 @@ const typeDefs = gql`
     companyName: String!
     position: String!
     dateApplied: String!
+    rejection: Boolean
     dateRejected: String
     description: String
     location: String
     notes: [Note]
+    interview: Boolean
     interviewDate: String
     interviewTime: String
     createdAt: String
