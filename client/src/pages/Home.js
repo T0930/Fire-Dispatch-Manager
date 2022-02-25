@@ -11,14 +11,14 @@ export default function Home() {
         <div>
         {applications ? (
           <>
-            <section className="student-list">
+            <section>
               <table>
                 <thead>
                   <tr>
-                    <th>Application ID</th>
                     <th>Company Name</th>
                     <th>Position</th>
                     <th>Date Applied</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
   
