@@ -1,7 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_APPLICATIONS } from '../utils/queries';
-import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 export default function Home() {
     const { loading, data } = useQuery(QUERY_APPLICATIONS);
