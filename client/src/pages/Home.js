@@ -4,7 +4,9 @@ import { QUERY_APPLICATIONS } from '../utils/queries';
 
 export default function Home() {
     const { loading, data } = useQuery(QUERY_APPLICATIONS);
+    console.log(data)
   const applications = data?.applications || [];
+  console.log(applications)
     return (
         <div>
         {applications ? (
