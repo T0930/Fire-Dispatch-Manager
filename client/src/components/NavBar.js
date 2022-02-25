@@ -14,7 +14,7 @@ import Inactive from '../pages/Inactive'
 import Interviews from '../pages/Interviews'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
-
+import Signup from '../pages/Signup'
 
 function NavBar({ currentPage, handlePageChange }) {
     const renderPage = () => {
@@ -32,6 +32,8 @@ function NavBar({ currentPage, handlePageChange }) {
         
       }if (currentPage === 'Login') {
         return <Login />;
+      }if (currentPage === 'Signup') {
+        return <Signup />;
       }
       return <Interviews />;
       
@@ -41,6 +43,7 @@ function NavBar({ currentPage, handlePageChange }) {
         <><div className="bg-dark text-secondary px-1 py-2 text-start">
             <div className="py-5">
                 <h1 className="display-5 fw-bold text-white">My Applications</h1>
+                
             </div>
         </div><div className="row">
                 <div className="col-2">
@@ -91,6 +94,14 @@ function NavBar({ currentPage, handlePageChange }) {
                                             onClick={() => handlePageChange('Login')}
                                             className={currentPage === 'Login' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Login
+                                        </a>
+                                    </li>
+                                    <li className="nav-item mx-0 mx-lg-1">
+                                        <a
+                                            href="#Signup"
+                                            onClick={() => handlePageChange('Signup')}
+                                            className={currentPage === 'Signup' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            Signup
                                         </a>
                                     </li>
 
