@@ -7,6 +7,7 @@ export const QUERY_APPLICATIONS = gql`
       companyName
       position
       dateApplied
+      location
     }
   }
 `;
