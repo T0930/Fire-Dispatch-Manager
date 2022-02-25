@@ -3,11 +3,13 @@
         "companyName": "Fred G. Acosta Job Corps Center",
         "position": "Head Security Guard",
         "dateApplied": "01/08/2022",
+        "rejection": false,
         "dateRejected": "",
         "description": "Responsible for assisting the Police Department in insuring the safety of citizens utilizing the recreational facilities of the Idle Hour Sports Complex, Nature Trail, Moon Lake, Tennis Courts and surrounding recreational facilities. Also responsible for assisting the Police Department in preventing vandalism of facilities. Maintain workplace in a clean and orderly manner. May be required to perform light janitorial duties.",
         "location": "Fred G. Acosta Job Corps Center, Tucson, AZ",
         "notes": [{
             "noteText": "I guess they didn’t like me"}],
+        "interview": false,
         "interviewDate": "01/28/2022",
         "interviewTime": "03:00 PM"
     },
@@ -15,11 +17,13 @@
         "companyName": "Universal Logistics Holdings",
         "position": "Data Analyst ",
         "dateApplied": "11/12/2021",
+        "rejection": false,
         "dateRejected": "01/05/2022",
         "description": "Universal Logistics Holdings, Inc. (ULH) is a leading asset-light provider of customized transportation and logistics solutions. We provide our customers with supply chain solutions that can be scaled to meet your changing demands and volumes. We offer a comprehensive suite of services including transportation, value-added, intermodal and specialized services that can be utilized throughout your entire supply chain. Universal's experienced management team, with its state-of-the-art technology, provides customized logistics solutions to its customers resulting in proven efficiencies and savings.",
         "location": "1115 W Alameda Dr, Tempe, AZ 85282",
         "notes": [{
             "noteText": "I guess they didn’t like me"}],
+        "interview": false,
         "interviewDate": "12/20/2021",
         "interviewTime": "01:00 PM"
     },
@@ -27,11 +31,13 @@
         "companyName": "Kett Engineering",
         "position": "Autonomous Vehicle Trainer",
         "dateApplied": "10/20/2021",
+        "rejection": false,
         "dateRejected": "01/05/2022",
         "description": "Under the direction of Learning & Development, conducts in-person classroom training and behind-the-wheel training for new and existing drivers and operators. Also provides training to new and experienced personnel in support roles. Evaluates learners, provides coaching, and records learner progress in learning management system. Performs the job and duties of Driver and/or Operator when not actively training. Estimated time spent training is 80% of their time.",
         "location": "Kett Engineering in Surprise, AZ 85374",
         "notes": [{
             "noteText": "I guess they didn’t like me"}],
+        "interview": false,
         "interviewDate": "11/18/2021",
         "interviewTime": "02:00 PM"
     },
@@ -39,11 +45,13 @@
         "companyName": "State of Arizona",
         "position": "SPECIAL AGENT",
         "dateApplied": "08/25/2021",
+        "rejection": false,
         "dateRejected": "09/05/2022",
         "description": "The Arizona Attorney General's Office Criminal Division/Special Investigations Section is seeking a Special Agent assigned to Health Care Fraud (HCFA) in Prescott. As a Special Agent, the position will coordinate closely with supervisors.",
         "location": "Prescott, AZ",
         "notes": [{
             "noteText": "I guess they didn’t like me"}],
+        "interview": false,
         "interviewDate": "08/28/2021",
         "interviewTime": "05:00 PM"
     }

@@ -15,6 +15,10 @@ const applicationSchema = new Schema({
         type: String,
         required: true,
     },
+    rejection: {
+      type: Boolean,
+      default: false,
+    },
     dateRejected: {
         type: String,
     },
@@ -37,6 +41,10 @@ const applicationSchema = new Schema({
           },
         },
       ],
+    interview: {
+      type: Boolean,
+      default: false,
+    },
     interviewDate: {
         type: String,
     },
