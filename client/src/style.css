@@ -1,0 +1,17 @@
+ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    background: lightgreen;
+    padding: 10px;
+  }
+  th,
+  td {
+    border: 1px solid grey;
+  }

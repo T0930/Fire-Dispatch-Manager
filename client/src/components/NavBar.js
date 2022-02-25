@@ -34,12 +34,12 @@ function NavBar({ currentPage, handlePageChange }) {
     };
 
     return (
-        <><div class="bg-dark text-secondary px-1 py-2 text-start">
-            <div class="py-5">
-                <h1 class="display-5 fw-bold text-white">My Applications</h1>
+        <><div className="bg-dark text-secondary px-1 py-2 text-start">
+            <div className="py-5">
+                <h1 className="display-5 fw-bold text-white">My Applications</h1>
             </div>
-        </div><div class="row">
-                <div class="col-4">
+        </div><div className="row">
+                <div className="col-4">
                     <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
                         <CDBSidebar textColor="#fff" backgroundColor="#333">
                             <CDBSidebarHeader>
@@ -89,7 +89,7 @@ function NavBar({ currentPage, handlePageChange }) {
                         </CDBSidebar>
                     </div>
                 </div>
-                <div class="col-8">
+                <div className="col-8">
                     <div id="content">
 
                         {renderPage()}

@@ -2,10 +2,10 @@ import { gql } from '@apollo/client';
 
 export const QUERY_APPLICATIONS = gql`
   query applications {
-    me {
+    applications {
       _id
       companyName
-      postion
+      position
       dateApplied
       rejection
       dateRejected
