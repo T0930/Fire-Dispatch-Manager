@@ -23,10 +23,10 @@ const resolvers = {
         //     return { token, profile };
         // },
 
-        addApplication: async (parent, { companyName, position, dateApplied, dateRejected, description,
-             location, notes, interviewDate, interviewTime }) => {
-            return Application.create({ companyName, position, dateApplied, dateRejected, description,
-                location, notes, interviewDate, interviewTime });
+        addApplication: async (parent, { companyName, position, dateApplied,  description,
+             location}) => {
+            return Application.create({ companyName, position, dateApplied, description,
+                location });
           },
         addNote: async (parent, { applicationId, noteText }) => {
             return Application.findOneAndUpdate(
