@@ -54,5 +54,76 @@
         "interview": false,
         "interviewDate": "08/28/2021",
         "interviewTime": "05:00 PM"
-    }
+    },
+    {
+        "companyName": "Revature",
+        "position": "Junior Software Developer",
+        "dateApplied": "02/18/2022",
+        "rejection": false,
+        "dateRejected": "",
+        "description": "Writing and debugging code. Troubleshooting software issues. Working closely with developers to improve product's functionality. Developing innovative solutions. Attending developer meetings. Participating in code reviews and quality assurance activities. Participating in estimation discussions with the product team.",
+        "location": "Gilbert, AZ",
+        "notes": [{
+            "noteText": "Could be a great fit"}],
+        "interview": false,
+        "interviewDate": "03/16/2022",
+        "interviewTime": "10:00 AM"
+    },
+    {
+        "companyName": "Vibrant Wellness",
+        "position": "Software Engineer",
+        "dateApplied": "01/22/2022",
+        "rejection": true,
+        "dateRejected": "2/10/2022",
+        "description": "Designing, integrating and implementing application software for Vibrant America/Wellness. Work on cutting edge customer facing applications. Work with business groups and other developers to improve old applications and implemenet new ones.",
+        "location": "San Carlos, CA",
+        "notes": [{
+            "noteText": "lack experience and technical skills for a role this high up"}],
+        "interview": false,
+        "interviewDate": "",
+        "interviewTime": ""
+    },
+    {
+        "companyName": "Vanlo",
+        "position": "Junior Software Engineer",
+        "dateApplied": "12/28/2021",
+        "rejection": false,
+        "dateRejected": "",
+        "description": "Responsible for assisting the Police Department in insuring the safety of citizens utilizing the recreational facilities of the Idle Hour Sports Complex, Nature Trail, Moon Lake, Tennis Courts and surrounding recreational facilities. Also responsible for assisting the Police Department in preventing vandalism of facilities. Maintain workplace in a clean and orderly manner. May be required to perform light janitorial duties.",
+        "location": "remote",
+        "notes": [{
+            "noteText": "I guess they didn’t like me"}],
+        "interview": false,
+        "interviewDate": "01/28/2022",
+        "interviewTime": "03:00 PM"
+    },
+    {
+        "companyName": "TalentLyft",
+        "position": "JavaScript Developer",
+        "dateApplied": "02/15/2022",
+        "rejection": false,
+        "dateRejected": "",
+        "description": "Develop and enhance main front end platforms. Developer new user-facing features. Design and develop new front end applications for various platforms. Develop specifications and designs for complex applications or modifying/maintaing complex existing applications.",
+        "location": "remote",
+        "notes": [{
+            "noteText": "I might actually get this one"}],
+        "interview": true,
+        "interviewDate": "03/15/2022",
+        "interviewTime": "01:30 PM"
+    },
+    {
+        "companyName": "CUNA Mutual Group",
+        "position": "Data Manager",
+        "dateApplied": "01/24/2022",
+        "rejection": true,
+        "dateRejected": "2/18/2022",
+        "description": "Manage and oversee all data systems. Determine methods for quality data collection. Create and implement policies and procedures for data management. Ensure adequacy, accuracy, and legitimacy of data. Implement effective and secure procedures for data processing. Support others in the daily use of data systems. Ensure adherence to legal and company standards. Evaluate performance of data systems. ",
+        "location": "remote",
+        "notes": [{
+            "noteText": "bombed the technical interview"}],
+        "interview": true,
+        "interviewDate": "02/17/2022",
+        "interviewTime": "03:00 PM"
+    },
+
 ]
