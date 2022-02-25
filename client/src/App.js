@@ -4,7 +4,6 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Dashboard from "./components/Dashboard";
 import './style.css'
 
-
 // const App = () => <Dashboard />;
 
 const client = new ApolloClient({

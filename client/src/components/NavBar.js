@@ -13,7 +13,7 @@ import Rejections from '../pages/Rejections'
 import Inactive from '../pages/Inactive'
 import Interviews from '../pages/Interviews'
 import Home from '../pages/Home'
-
+import Login from '../pages/Login'
 
 
 function NavBar({ currentPage, handlePageChange }) {
@@ -29,8 +29,12 @@ function NavBar({ currentPage, handlePageChange }) {
       }
       if (currentPage === 'Inactive') {
         return <Inactive />;
+        
+      }if (currentPage === 'Login') {
+        return <Login />;
       }
       return <Interviews />;
+      
     };
 
     return (
@@ -79,6 +83,14 @@ function NavBar({ currentPage, handlePageChange }) {
                                             onClick={() => handlePageChange('Interviews')}
                                             className={currentPage === 'Interviews' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Interviews
+                                        </a>
+                                    </li>
+                                    <li className="nav-item mx-0 mx-lg-1">
+                                        <a
+                                            href="#Login"
+                                            onClick={() => handlePageChange('Login')}
+                                            className={currentPage === 'Login' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            Login
                                         </a>
                                     </li>
 
