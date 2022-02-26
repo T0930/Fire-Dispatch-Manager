@@ -18,6 +18,7 @@ query Application($interview: Boolean) {
     companyName
     position
     location
+    interviewDate
   }
 }
 `

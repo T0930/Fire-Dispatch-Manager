@@ -23,7 +23,7 @@ export default function Interviews() {
                       <th>Company Name</th>
                       <th>Position</th>
                       <th>Location</th>
-                      <th>Update</th>
+                      <th>Interview Date</th>
                     </tr>
                   </thead>
     
@@ -34,6 +34,7 @@ export default function Interviews() {
                         <td>{int.companyName}</td>
                         <td>{int.position}</td>
                         <td>{int.location}</td>
+                        <td>{int.interviewDate}</td>
     
                       </tr>
                     ))}
