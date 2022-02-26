@@ -21,3 +21,12 @@ query Application($interview: Boolean) {
   }
 }
 `
+export const  QUERY_REJECTIONS = gql`
+query Application($rejection: Boolean) {
+  rejection(rejection: $rejection) {
+    companyName
+    position
+    location
+  }
+}
+`
