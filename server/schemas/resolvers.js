@@ -11,8 +11,12 @@ const resolvers = {
         return Application.findOne({_id: applicationId});
       },
       interview: async(parent, {interview}, context, info) => {
-        return Application.find({interview: interview});
+        return Application.find({interview: true});
       },
+      rejection: async(parent, {rejection}, context, info) => {
+        return Application.find({rejection: true});
+      },
+
 
     //   me: async (parent, args, context) => {
     //     if (context.user) {
