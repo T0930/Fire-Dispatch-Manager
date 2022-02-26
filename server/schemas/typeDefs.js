@@ -27,6 +27,8 @@ const typeDefs = gql`
     applications(limit: Int): [Application]!
     application(applicationId: ID!): Application
     interview(interview: Boolean): [Application]
+    rejection(rejection: Boolean): [Application]
+
   }
 
   type Mutation {

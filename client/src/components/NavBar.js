@@ -59,7 +59,16 @@ function NavBar({ currentPage, handlePageChange }) {
                                             className="text-decoration-none" style={{ color: 'inherit' }}
                                             onClick={() => handlePageChange('Active')}
                                             className={currentPage === 'Active' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
-                                            All Active Applications
+                                            All Applications
+                                        </a>
+                                    </li>
+                                    <li className="nav-item mx-0 mx-lg-1">
+                                        <a
+                                            href="#interviews"
+                                            className="text-decoration-none" style={{ color: 'inherit' }}
+                                            onClick={() => handlePageChange('Interviews')}
+                                            className={currentPage === 'Interviews' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            Interviews
                                         </a>
                                     </li>
                                     <li className="nav-item mx-0 mx-lg-1">
@@ -80,15 +89,7 @@ function NavBar({ currentPage, handlePageChange }) {
                                             Inactive
                                         </a>
                                     </li>
-                                    <li className="nav-item mx-0 mx-lg-1">
-                                        <a
-                                            href="#interviews"
-                                            className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => handlePageChange('Interviews')}
-                                            className={currentPage === 'Interviews' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
-                                            Interviews
-                                        </a>
-                                    </li>
+
 
 
 

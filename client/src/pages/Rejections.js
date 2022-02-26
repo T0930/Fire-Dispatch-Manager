@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_REJECTIONS } from '../utils/queries';
 
-export default function Interviews() {
+export default function Rejection() {
 
     const { loading, data } = useQuery(QUERY_REJECTIONS)
 
@@ -23,7 +23,7 @@ export default function Interviews() {
                       <th>Company Name</th>
                       <th>Position</th>
                       <th>Location</th>
-                      <th>Update</th>
+                      <th>Date Rejected</th>
                     </tr>
                   </thead>
     
@@ -34,6 +34,7 @@ export default function Interviews() {
                         <td>{rej.companyName}</td>
                         <td>{rej.position}</td>
                         <td>{rej.location}</td>
+                        <td>{rej.dateRejected}</td>
     
                       </tr>
                     ))}
