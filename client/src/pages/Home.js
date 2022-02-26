@@ -12,6 +12,7 @@ const reject = <FontAwesomeIcon icon={faXmark} size="1x" fixedWidth className="r
 export default function Home() {
   const { loading, data } = useQuery(QUERY_APPLICATIONS);
   const applications = data?.applications || [];
+  console.log(applications)
 
 
   const [isOpen, setIsOpen] = useState(false);
