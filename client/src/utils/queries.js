@@ -27,6 +27,8 @@ query Application($rejection: Boolean) {
     companyName
     position
     location
+    dateApplied
+    dateRejected
   }
 }
 `

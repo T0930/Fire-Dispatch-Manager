@@ -5,9 +5,7 @@ import { QUERY_INTERVIEWS } from '../utils/queries';
 
 export default function Interviews() {
     // const { interview } = useParams();
-    const { loading, data } = useQuery(QUERY_INTERVIEWS, {
-        variables: { interview: true },
-      });
+    const { loading, data } = useQuery(QUERY_INTERVIEWS)
 
       const interviews = data?.interview || [];;
       console.log(interviews)
