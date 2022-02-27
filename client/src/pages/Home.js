@@ -167,7 +167,12 @@ export default function Home() {
     <br/>
 
 
-    <button type="submit" className="btn spec-btn">Add application</button>
+
+
+
+
+
+    <button type="submit">Add application</button>
     <p>* indicates required field </p>
 </form>
 </div>
