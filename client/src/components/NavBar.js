@@ -89,6 +89,15 @@ function NavBar({ currentPage, handlePageChange }) {
                                             Inactive
                                         </a>
                                     </li>
+                                    <li className="nav-item mx-0 mx-lg-1">
+                                        <a
+                                            href="#Login"
+                                            className="text-decoration-none" style={{ color: 'inherit' }}
+                                            onClick={() => handlePageChange('Login')}
+                                            className={currentPage === 'Login' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            Login
+                                        </a>
+                                    </li>
 
 
 
