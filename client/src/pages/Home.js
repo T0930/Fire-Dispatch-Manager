@@ -20,7 +20,6 @@ export default function Home() {
   const applications = data?.applications || [];
   console.log(applications)
 
-<<<<<<< HEAD
   // const [interview, setInterview] = useState('');
   // // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
   // const [editInterview, { error }] = useMutation(EDIT_INTERVIEW);
@@ -42,25 +41,22 @@ export default function Home() {
 
 
   // let color =''
-=======
-  let color = []
->>>>>>> e2d863c83a7b63fcbd5744e5857f0a05225dd061
 
-  for (let i = 0; i < applications.length; i++) {
-    const element = applications[i].interview
-      console.log(element)
-      switch (element) {
-        case true:
-          color = "blue";
-          break;
-          case false:
-            color = "green";
-            break;
-          default:
-            color ="black"
-      }
-  } 
-  console.log(color)
+  // for (let i = 0; i < applications.length; i++) {
+  //   const element = applications[i].interview
+  //     console.log(element)
+  //     switch (element) {
+  //       case true:
+  //         color = "blue";
+  //         break;
+  //         case false:
+  //           color = "green";
+  //           break;
+  //         default:
+  //           color ="black"
+  //     }
+  // } 
+  // console.log(color)
 
 
 
@@ -114,14 +110,9 @@ export default function Home() {
                     <td>
                       <button
                         type="button"
-<<<<<<< HEAD
                         className="yayInterview"
                         onClick={() => editInterview(application._id)}
                         // onClick={() => console.log(application._id)}
-=======
-                        className="interviewBtn"
-                      //   onClick={() => removeApplication(application.id)}
->>>>>>> e2d863c83a7b63fcbd5744e5857f0a05225dd061
                       >
                         <a className="check">{check}</a>
                       </button>
