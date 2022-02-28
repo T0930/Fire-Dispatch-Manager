@@ -10,7 +10,10 @@ export default function Interviews() {
       const interviews = data?.interview || [];;
       console.log(interviews)
 
-
+    const color = "lightseagreen"
+    // if (interviews.interview == false) {
+    //     return color = 'lightseagreen'
+    // } 
 
     return ( 
         <div>
@@ -29,9 +32,9 @@ export default function Interviews() {
     
                   <tbody>
                     {interviews.map((int) => (
-                      <tr key={int.id}>
+                      <tr key={int.id} style={{ color }}>
                         <td>{int.dateApplied}</td>
-                        <td>{int.companyName}</td>
+                        <td >{int.companyName}</td>
                         <td>{int.position}</td>
                         <td>{int.location}</td>
                         <td>{int.interviewDate}</td>

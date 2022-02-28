@@ -10,9 +10,26 @@ const reject = <FontAwesomeIcon icon={faXmark} size="1x" fixedWidth className="r
 
 
 export default function Home() {
+
   const { loading, data } = useQuery(QUERY_APPLICATIONS);
   const applications = data?.applications || [];
   console.log(applications)
+
+  // let color =''
+
+  // for (let i = 0; i < applications.length; i++) {
+  //   const element = applications[i].interview
+  //     console.log(element)
+  //     switch (element) {
+  //       case true:
+  //         color = "blue";
+  //         case false:
+  //           color = "green";
+  //         default:
+  //           color ="black"
+  //     }
+  // } 
+
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +40,8 @@ export default function Home() {
     setIsOpen(false)
   };
 
+
+ 
 
   return (
     <div>
@@ -54,7 +73,7 @@ export default function Home() {
                 {applications.map((application) => (
                   <tr key={application.id}>
                     <td>{application.dateApplied}</td>
-                    <td>{application.companyName}</td>
+                    <td style = {{color: 'black'}}>{application.companyName}</td>
                     <td>{application.position}</td>
                     <td>{application.location}</td>
 
