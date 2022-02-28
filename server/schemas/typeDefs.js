@@ -38,6 +38,7 @@ const typeDefs = gql`
     addNote(applicationId: ID!, noteText: String!): Application
     removeApplication(applicationId: ID!): Application
     removeNote(applicationId: ID!, noteId: ID!): Application
+    editInterview(applicationId: ID!, interview: Boolean): Application
   }
 `;
 
