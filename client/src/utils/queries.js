@@ -34,4 +34,13 @@ query Application($rejection: Boolean) {
     dateRejected
   }
 }
-`
+`;
+
+export const QUERY_SINGLE_APPLICATION = gql`
+  query singleApplication($applicationId: ID!) {
+    application(applicationId: $applicationId) {
+      companyName
+      position
+    }
+  }
+`;

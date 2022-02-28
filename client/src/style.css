@@ -24,11 +24,15 @@ ul {
     display: none;
 }
 
-.yayInterview {
+.interviewBtn {
     background-color: white;
     border: none;
 }
-.booReject {
+.rejectionBtn {
+    background-color: white;
+    border: none;
+}
+.moreInfoBtn {
     background-color: white;
     border: none;
 }
@@ -39,11 +43,14 @@ ul {
 .reject {
     color: red;
 }
+.moreInfo {
+    color: rgb(59, 58, 58)
+}
 
-.nav-link {
+/* .nav-link {
     color: white;
 }
 
 .nav-item {
     color: white;
-}
+} */

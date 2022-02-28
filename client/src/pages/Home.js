@@ -7,8 +7,11 @@ import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesRight} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 const check = <FontAwesomeIcon icon={faCheck} size="1x" fixedWidth className="check"/>
 const reject = <FontAwesomeIcon icon={faXmark} size="1x" fixedWidth className="reject"/>
+const angles = <FontAwesomeIcon icon={faAnglesRight} size="1x" fixedWidth className="moreInfo"/>
 
 
 export default function Home() {
@@ -17,6 +20,7 @@ export default function Home() {
   const applications = data?.applications || [];
   console.log(applications)
 
+<<<<<<< HEAD
   // const [interview, setInterview] = useState('');
   // // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
   // const [editInterview, { error }] = useMutation(EDIT_INTERVIEW);
@@ -38,19 +42,25 @@ export default function Home() {
 
 
   // let color =''
+=======
+  let color = []
+>>>>>>> e2d863c83a7b63fcbd5744e5857f0a05225dd061
 
-  // for (let i = 0; i < applications.length; i++) {
-  //   const element = applications[i].interview
-  //     console.log(element)
-  //     switch (element) {
-  //       case true:
-  //         color = "blue";
-  //         case false:
-  //           color = "green";
-  //         default:
-  //           color ="black"
-  //     }
-  // } 
+  for (let i = 0; i < applications.length; i++) {
+    const element = applications[i].interview
+      console.log(element)
+      switch (element) {
+        case true:
+          color = "blue";
+          break;
+          case false:
+            color = "green";
+            break;
+          default:
+            color ="black"
+      }
+  } 
+  console.log(color)
 
 
 
@@ -96,7 +106,7 @@ export default function Home() {
                 {applications.map((application) => (
                   <tr key={application.id}>
                     <td>{application.dateApplied}</td>
-                    <td style = {{color: 'black'}}>{application.companyName}</td>
+                    <td style = {{color}}>{application.companyName}</td>
                     <td>{application.position}</td>
                     <td>{application.interview.toString()}</td>
                     <td>{application.location}</td>
@@ -104,19 +114,32 @@ export default function Home() {
                     <td>
                       <button
                         type="button"
+<<<<<<< HEAD
                         className="yayInterview"
                         onClick={() => editInterview(application._id)}
                         // onClick={() => console.log(application._id)}
+=======
+                        className="interviewBtn"
+                      //   onClick={() => removeApplication(application.id)}
+>>>>>>> e2d863c83a7b63fcbd5744e5857f0a05225dd061
                       >
                         <a className="check">{check}</a>
                       </button>
                       <button
                         type="button"
-                        className="booReject"
+                        className="rejectionBtn"
                       //   onClick={() => removeApplication(application.id)}
                       >
                         <a className="reject">{reject}</a>
                       </button>
+                      <Link
+                        // type="button"
+                        className="moreInfoBtn"
+                        to={`/application/${application._id}`}
+                        // onClick={() => console.log(application._id)}
+                      >
+                        <a className="moreInfo">{angles}</a>
+                     </Link>
 
                     </td>
                   </tr>
