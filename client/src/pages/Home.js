@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { QUERY_APPLICATIONS } from '../utils/queries';
+import { EDIT_INTERVIEW } from '../utils/mutations';
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -18,23 +20,43 @@ export default function Home() {
   const applications = data?.applications || [];
   console.log(applications)
 
-  let color = []
+  // const [interview, setInterview] = useState('');
+  // // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
+  // const [editInterview, { error }] = useMutation(EDIT_INTERVIEW);
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   // Since mutation function is async, wrap in a `try...catch` to catch any network errors from throwing due to a failed request.
+  //   try {
+  //     // Execute mutation and pass in defined parameter data as variables
+  //     const { data } = await editInterview({
+  //       variables: { interview },
+  //     });
+  //     window.location.reload();
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
-  for (let i = 0; i < applications.length; i++) {
-    const element = applications[i].interview
-      console.log(element)
-      switch (element) {
-        case true:
-          color = "blue";
-          break;
-          case false:
-            color = "green";
-            break;
-          default:
-            color ="black"
-      }
-  } 
-  console.log(color)
+  const [editInterview, {error}] = useMutation(EDIT_INTERVIEW);
+
+
+  // let color =''
+
+  // for (let i = 0; i < applications.length; i++) {
+  //   const element = applications[i].interview
+  //     console.log(element)
+  //     switch (element) {
+  //       case true:
+  //         color = "blue";
+  //         break;
+  //         case false:
+  //           color = "green";
+  //           break;
+  //         default:
+  //           color ="black"
+  //     }
+  // } 
+  // console.log(color)
 
 
 
@@ -70,6 +92,7 @@ export default function Home() {
                 <th>Date Applied</th>
                   <th>Company Name</th>
                   <th>Position</th>
+                  <th>Interview</th>
                   <th>Location</th>
                   <th>Update</th>
                 </tr>
@@ -81,13 +104,15 @@ export default function Home() {
                     <td>{application.dateApplied}</td>
                     <td style = {{color}}>{application.companyName}</td>
                     <td>{application.position}</td>
+                    <td>{application.interview.toString()}</td>
                     <td>{application.location}</td>
 
                     <td>
                       <button
                         type="button"
-                        className="interviewBtn"
-                      //   onClick={() => removeApplication(application.id)}
+                        className="yayInterview"
+                        onClick={() => editInterview(application._id)}
+                        // onClick={() => console.log(application._id)}
                       >
                         <a className="check">{check}</a>
                       </button>

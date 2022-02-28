@@ -39,6 +39,16 @@ const resolvers = {
             return Application.create({ companyName, position, dateApplied, description,
                 location });
           },
+          editInterview: async (parent, { applicationId, interview }) => {
+            const changeInt = await Application.findOneAndUpdate(
+              { _id: applicationId },
+              { 
+                $set: {interview: true }
+              },
+              { new: true }
+            );
+            return changeInt;
+          },
         addNote: async (parent, { applicationId, noteText }) => {
             return Application.findOneAndUpdate(
               { _id: applicationId },
