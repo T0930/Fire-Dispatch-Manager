@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { QUERY_APPLICATIONS } from '../utils/queries';
-import Modal from "react-bootstrap/Modal";
+// import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
@@ -15,13 +15,13 @@ export default function Home() {
   console.log(applications)
 
 
-  const [isOpen, setIsOpen] = useState(false);
-  const showModal = (e) => {
-    setIsOpen({ show: true })
-  };
-  const hideModal = () => {
-    setIsOpen(false)
-  };
+//   const [isOpen, setIsOpen] = useState(false);
+//   const showModal = (e) => {
+//     setIsOpen({ show: true })
+//   };
+//   const hideModal = () => {
+//     setIsOpen(false)
+//   };
 
 
   return (
