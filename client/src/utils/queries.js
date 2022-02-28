@@ -8,6 +8,7 @@ export const QUERY_APPLICATIONS = gql`
       position
       dateApplied
       location
+      interview
     }
   }
 `;
