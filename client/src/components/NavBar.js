@@ -5,37 +5,10 @@ import {
     CDBSidebarFooter,
     CDBSidebarHeader,
     CDBSidebarMenu,
-    CDBSidebarMenuItem,
 } from 'cdbreact';
-import { NavLink } from 'react-router-dom';
-import Active from '../pages/Active'
-import Rejections from '../pages/Rejections'
-import Inactive from '../pages/Inactive'
-import Interviews from '../pages/Interviews'
-import Home from '../pages/Home'
-import Login from '../pages/Login'
 
 
-function NavBar({ currentPage, handlePageChange }) {
-    const renderPage = () => {
-        if (currentPage === 'Home') {
-            return <Home />;
-        }
-        if (currentPage === 'Active') {
-            return <Active />;
-        }
-        if (currentPage === 'Rejections') {
-            return <Rejections />;
-        }
-        if (currentPage === 'Inactive') {
-            return <Inactive />;
-
-        } if (currentPage === 'Login') {
-            return <Login />;
-        }
-        return <Interviews />;
-
-    };
+function NavBar(props)  {
 
     return (
         <><div className="bg-dark text-secondary px-1 py-2 text-start">
@@ -47,7 +20,7 @@ function NavBar({ currentPage, handlePageChange }) {
                     <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
                         <CDBSidebar textColor="#fff" backgroundColor="#333">
                             <CDBSidebarHeader>
-                                <a href="#Home" className="text-decoration-none" style={{ color: 'inherit' }} onClick={() => handlePageChange('Home')}>
+                                <a href="/" className="text-decoration-none" style={{ color: 'inherit' }} onClick={() => props.handlePageChange('Home')}>
                                     Home
                                 </a>
                             </CDBSidebarHeader>
@@ -55,37 +28,37 @@ function NavBar({ currentPage, handlePageChange }) {
                                 <CDBSidebarMenu>
                                     <li className="nav-item mx-0 mx-lg-1">
                                         <a
-                                            href="#active"
+                                            href="/active"
                                             className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => handlePageChange('Active')}
-                                            className={currentPage === 'Active' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            onClick={() => props.handlePageChange('Active')}
+                                            className={props.currentPage === 'Active' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             All Applications
                                         </a>
                                     </li>
                                     <li className="nav-item mx-0 mx-lg-1">
                                         <a
-                                            href="#interviews"
+                                            href="/interviews"
                                             className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => handlePageChange('Interviews')}
-                                            className={currentPage === 'Interviews' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            onClick={() => props.handlePageChange('Interviews')}
+                                            className={props.currentPage === 'Interviews' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Interviews
                                         </a>
                                     </li>
                                     <li className="nav-item mx-0 mx-lg-1">
                                         <a
-                                            href="#rejections"
+                                            href="/rejections"
                                             className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => handlePageChange('Rejections')}
-                                            className={currentPage === 'Rejections' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            onClick={() => props.handlePageChange('Rejections')}
+                                            className={props.currentPage === 'Rejections' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Rejections
                                         </a>
                                     </li>
                                     <li className="nav-item mx-0 mx-lg-1">
                                         <a
-                                            href="#inactive"
+                                            href="/inactive"
                                             className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => handlePageChange('Inactive')}
-                                            className={currentPage === 'Inactive' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            onClick={() => props.handlePageChange('Inactive')}
+                                            className={props.currentPage === 'Inactive' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Inactive
                                         </a>
                                     </li>
@@ -107,8 +80,8 @@ function NavBar({ currentPage, handlePageChange }) {
                                     <a
                                             href="#Logout"
                                             className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => handlePageChange('Logout')}
-                                            className={currentPage === 'Logout' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            onClick={() => props.handlePageChange('Logout')}
+                                            className={props.currentPage === 'Logout' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Logout
                                         </a>
                                 </div>
@@ -119,7 +92,7 @@ function NavBar({ currentPage, handlePageChange }) {
                 <div className="col-9">
                     <div id="content align-self-end">
 
-                        {renderPage()}
+                        {props.children}
 
                     </div>
 
