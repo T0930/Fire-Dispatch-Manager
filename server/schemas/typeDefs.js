@@ -24,8 +24,11 @@ const typeDefs = gql`
   }
 
   type Query {
-    applications: [Application]!
+    applications(limit: Int): [Application]!
     application(applicationId: ID!): Application
+    interview(interview: Boolean): [Application]
+    rejection(rejection: Boolean): [Application]
+
   }
 
   type Mutation {

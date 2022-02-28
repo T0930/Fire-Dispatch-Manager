@@ -11,3 +11,26 @@ export const QUERY_APPLICATIONS = gql`
     }
   }
 `;
+
+export const  QUERY_INTERVIEWS = gql`
+query Application($interview: Boolean) {
+  interview(interview: $interview) {
+    companyName
+    position
+    location
+    interviewDate
+    dateApplied
+  }
+}
+`
+export const  QUERY_REJECTIONS = gql`
+query Application($rejection: Boolean) {
+  rejection(rejection: $rejection) {
+    companyName
+    position
+    location
+    dateApplied
+    dateRejected
+  }
+}
+`
