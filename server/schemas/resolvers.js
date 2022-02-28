@@ -7,7 +7,7 @@ const resolvers = {
       applications: async () => {
         return Application.find();
       },
-      application: async(parent, {applicationId}, context, info) => {
+      application: async(parent, {applicationId}) => {
         return Application.findOne({_id: applicationId});
       },
       interview: async(parent, {interview}, context, info) => {
