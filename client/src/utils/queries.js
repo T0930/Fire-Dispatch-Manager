@@ -41,6 +41,10 @@ export const QUERY_SINGLE_APPLICATION = gql`
     application(applicationId: $applicationId) {
       companyName
       position
+      description
+      notes {
+        noteText
+      }
     }
   }
 `;
