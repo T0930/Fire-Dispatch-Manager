@@ -32,6 +32,15 @@ mutation editInterview($applicationId: ID!, $interviewDate: String, $interviewTi
 }
 `;
 
+export const EDIT_REJECTION = gql`
+mutation editRejection($applicationId: ID!, $dateRejected: String) {
+  editRejection(applicationId: $applicationId, dateRejected: $dateRejected) {
+    rejection
+    dateRejected
+  }
+}
+`
+
 
 
 

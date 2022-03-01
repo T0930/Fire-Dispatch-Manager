@@ -40,6 +40,7 @@ const typeDefs = gql`
     removeApplication(applicationId: ID!): Application
     removeNote(applicationId: ID!, noteId: ID!): Application
     editInterview(applicationId: ID!, interviewDate: String, interviewTime: String, interviewLocation: String): Application
+    editRejection(applicationId: ID!, dateRejected: String): Application
 
   }
 
