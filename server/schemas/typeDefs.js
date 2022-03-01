@@ -24,13 +24,11 @@ const typeDefs = gql`
     email: String
     password: String
   }
-
   type Note {
     _id: ID
     noteText: String
     createdAt: String
   }
-
   type Query {
     applications(limit: Int): [Application]!
     application(applicationId: ID!): Application
@@ -39,9 +37,7 @@ const typeDefs = gql`
     users: [User]
     user(username: String!): User
     me: User
-
   }
-
   type Mutation {
     addApplication(companyName: String!, position: String!, dateApplied: String!,
       dateRejected: String, description: String, location: String,
@@ -54,12 +50,10 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
-
   type Auth {
     token: ID!
     user: User
   }
-
 `;
 
 module.exports = typeDefs;
