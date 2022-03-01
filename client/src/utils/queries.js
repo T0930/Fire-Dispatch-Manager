@@ -17,10 +17,16 @@ export const  QUERY_INTERVIEWS = gql`
 query Application($interview: Boolean) {
   interview(interview: $interview) {
     companyName
+    description
     position
     location
     interviewDate
+    interviewTime
     dateApplied
+    interviewLocation
+    notes {
+      noteText
+    }
   }
 }
 `

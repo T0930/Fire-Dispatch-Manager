@@ -110,7 +110,8 @@
             "noteText": "I might actually get this one"}],
         "interview": true,
         "interviewDate": "03/15/2022",
-        "interviewTime": "01:30 PM"
+        "interviewTime": "01:30 PM",
+        "interviewLocation": "Virtual"
     },
     {
         "companyName": "CUNA Mutual Group",
@@ -124,7 +125,8 @@
             "noteText": "bombed the technical interview"}],
         "interview": true,
         "interviewDate": "02/17/2022",
-        "interviewTime": "03:00 PM"
+        "interviewTime": "03:00 PM",
+        "interviewLocation": "On-Site"
     }
 
 ]

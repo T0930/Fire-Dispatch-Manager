@@ -51,6 +51,9 @@ const applicationSchema = new Schema({
     interviewTime: {
         type: String,
     },
+    interviewLocation: {
+      type: String,
+    },
     createdAt: {
         type: Date,
         default: Date.now,

@@ -72,23 +72,23 @@ window.location.reload();
   const [editInterview, {error}] = useMutation(EDIT_INTERVIEW);
 
 
-  let color =''
+  // let color =''
 
-  for (let i = 0; i < applications.length; i++) {
-    const element = applications[i].interview
-      console.log(element)
-      switch (element) {
-        case true:
-          color = "blue";
-          break;
-          case false:
-            color = "green";
-            break;
-          default:
-            color ="black"
-      }
-  } 
-  console.log(color)
+  // for (let i = 0; i < applications.length; i++) {
+  //   const element = applications[i].interview
+  //     console.log(element)
+  //     switch (element) {
+  //       case true:
+  //         color = "blue";
+  //         break;
+  //         case false:
+  //           color = "green";
+  //           break;
+  //         default:
+  //           color ="black"
+  //     }
+  // } 
+  // console.log(color)
 
 
 
@@ -133,7 +133,7 @@ window.location.reload();
                 {applications.map((application) => (
                   <tr key={application.id}>
                     <td>{application.dateApplied}</td>
-                    <td style = {{color}}>{application.companyName}</td>
+                    <td>{application.companyName}</td>
                     <td>{application.position}</td>
                     <td>{application.interview.toString()}</td>
                     <td>{application.location}</td>
