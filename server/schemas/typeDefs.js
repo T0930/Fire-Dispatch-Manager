@@ -14,6 +14,7 @@ const typeDefs = gql`
     interview: Boolean
     interviewDate: String
     interviewTime: String
+    interviewLocation: String
     createdAt: String
   }
 

@@ -14,6 +14,7 @@ export default function Rejection() {
 
     return ( 
         <div>
+                        <h1 className="text-center">Rejected Applications</h1>
      {rejections ? (
               <section>
                 <table>
