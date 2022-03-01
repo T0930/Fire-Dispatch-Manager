@@ -23,15 +23,12 @@ const resolvers = {
       user: async (parent, { username }) => {
         return User.findOne({ username });
       },
-
-
-
-    //   me: async (parent, args, context) => {
-    //     if (context.user) {
-    //       return User.findOne({ _id: context.user._id });
-    //     }
-    //     throw new AuthenticationError('You need to be logged in!');
-    //   },
+     me: async (parent, args, context) => {
+        if (context.user) {
+          return User.findOne({ _id: context.user._id });
+        }
+        throw new AuthenticationError('You need to be logged in!');
+      },
     },
 
 

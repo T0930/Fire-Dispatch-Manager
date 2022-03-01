@@ -17,13 +17,14 @@ const angles = <FontAwesomeIcon icon={faAnglesRight} size="1x" fixedWidth classN
 
 
 export default function Home() {
+  const { loading, data } = useQuery(QUERY_APPLICATIONS);
   const [applicationData, setApplicationData] = useState({ 
     companyName: '',
     position: '',
     dateApplied: '',
   })
   const [ addApplication ]  = useMutation(ADD_APPLICATION);
-  const { loading, data } = useQuery(QUERY_APPLICATIONS);
+
   const applications = data?.applications || [];
   console.log(applications)
 
