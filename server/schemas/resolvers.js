@@ -37,13 +37,20 @@ const resolvers = {
         addApplication: async (parent, args) => {
             return Application.create(args, { new: true });
           },
-          editInterview: async (parent, { applicationId, interview }) => {
+          // editInterview: async (parent, { applicationId, interview, interviewDate, interviewLocation, interviewTime }) => {
+          //   const changeInt = await Application.findOneAndUpdate(
+          //     { _id: applicationId },
+          //     { 
+          //       $set: {interview: true, interviewDate: interviewDate, interviewLocation: interviewLocation, interviewTime: interviewTime }
+          //     },
+          //     { new: true }
+          //   );
+          //   return changeInt;
+          // },
+          editInterview: async (parent, { applicationId, interviewDate, interviewLocation, interviewTime }) => {
             const changeInt = await Application.findOneAndUpdate(
               { _id: applicationId },
-              { 
-                $set: {interview: true }
-              },
-              { new: true }
+              { $set: {interview: true }, interviewDate: interviewDate, interviewLocation: interviewLocation, interviewTime: interviewTime},
             );
             return changeInt;
           },

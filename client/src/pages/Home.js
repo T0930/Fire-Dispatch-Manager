@@ -27,12 +27,12 @@ export default function Home() {
   const applications = data?.applications || [];
   console.log(applications)
 
-  // add handleInputChange which would accept any changes in input fields
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setApplicationData({...applicationData, [name]: value})
   }
-  // add handleFormSubmit 
+
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   console.log(applicationData.dateApplied)
@@ -52,47 +52,58 @@ const handleFormSubmit = async (event) => {
 window.location.reload();
 }
 
-  // const [interview, setInterview] = useState('');
-  // // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
-  // const [editInterview, { error }] = useMutation(EDIT_INTERVIEW);
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   // Since mutation function is async, wrap in a `try...catch` to catch any network errors from throwing due to a failed request.
-  //   try {
-  //     // Execute mutation and pass in defined parameter data as variables
-  //     const { data } = await editInterview({
-  //       variables: { interview },
-  //     });
-  //     window.location.reload();
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
+
 
   const [editInterview, {error}] = useMutation(EDIT_INTERVIEW);
+  const [interviewData, setInterviewData] = useState({ 
+    interviewLocation: '',
+    interviewTime: '',
+    interviewDate: '',
+    interview: true,
+    interviewId: ''
 
+  })
+  const handleInputChangeI = (event) => {
+    const { name, value } = event.target;
+    // console.log('hello')
+    // console.log(event.currentTarget.id)
+    setInterviewData({...interviewData, [name]: value})
+    // console.log(...interviewData)
+  }
 
-  // let color =''
+const handleFormSubmitI = async (event) => {
+  event.preventDefault();
+  console.log('hello')
+  // console.log(interviewData.interviewDate)
+  setInterviewData({interview: true})
+  console.log({...interviewData})
+  try{
+  const { data } = await editInterview({ 
+    variables: {
+      interviewLocation: interviewData.interviewLocation,
+      interviewDate: interviewData.interviewDate,
+      interviewTime: interviewData.interviewTime,
+      interview: interviewData.interview,
+      applicationId: interviewData.interviewId}
+  })
+  console.log(data)
+  setInterviewData({
+    interviewDate: '',
+    interviewTime: '',
+    interviewLocation: '',
+    applicationId: '',
+  })
+} catch (e) {
+  console.error(e)
+}
+window.location.reload();
+}
 
-  // for (let i = 0; i < applications.length; i++) {
-  //   const element = applications[i].interview
-  //     console.log(element)
-  //     switch (element) {
-  //       case true:
-  //         color = "blue";
-  //         break;
-  //         case false:
-  //           color = "green";
-  //           break;
-  //         default:
-  //           color ="black"
-  //     }
-  // } 
-  // console.log(color)
+const handleRadioChangeI = async (event) =>{
+  setInterviewData({interview: true})
+}
 
-
-
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState('');
   const showModal = (e) => {
     setIsOpen({ show: true })
   };
@@ -100,6 +111,17 @@ window.location.reload();
     setIsOpen(false)
   };
 
+  const [isOpenI, setIsOpenI] = useState('');
+  const showModalI = (e) => {
+    console.log(e.currentTarget.id)
+    console.log(e.currentTarget.value)
+ setInterviewData({interviewId: e.currentTarget.id})
+ console.log(interviewData)
+    setIsOpenI({ show: true })
+  };
+  const hideModalI = () => {
+    setIsOpenI(false)
+  };
   
 
   return (
@@ -141,8 +163,11 @@ window.location.reload();
                     <td>
                       <button
                         type="button"
+                        onClick={showModalI}
                         className="interviewBtn"
-                        onClick={() => editInterview(application._id)}
+                        id={application._id}
+                        value={application.interview}
+                        // onClick={() => editInterview(application._id)}
                         // onClick={() => console.log(application._id)}
                       >
                         <a className="check">{check}</a>
@@ -240,6 +265,64 @@ window.location.reload();
 
     <button type="submit" onClick={handleFormSubmit}>Add application</button>
     <p>* indicates required field </p>
+</form>
+</div>
+</div>
+</div>
+
+
+      </Modal>
+
+
+      <Modal
+        show={isOpenI}
+        onHide={hideModalI}
+        size='lg'
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <div className="modal-header border-0"><button className="btn-close" type="button" onClick={handleFormSubmitI, hideModalI} data-bs-dismiss="modal" aria-label="Close"></button></div><div className="modal-body  pb-1">
+    <div className="container">
+        <div className="row ">
+            <div className="col">
+
+            </div>
+                <form className="mt-4 new-app" onSubmit={handleFormSubmitI}>
+
+<h2 className="text-center">Congratulations on your Interview!</h2>
+<div className="form-group">
+    <label for="interviewDate"><strong>When is it?</strong></label>
+    <input type="input" className="form-control interviewDate" id="interviewDate" name="interviewDate"
+        aria-describedby="interviewDate" placeholder="ie 04/15/2022" onChange={handleInputChangeI} value={interviewData.interviewDate}/>
+       
+
+</div>
+
+<br/>
+<div className="form-group">
+    <label for="age"><strong>What time is it?</strong> </label>
+    <input type="input" className="form-control" id="interviewTime" name="interviewTime"
+        aria-describedby="interviewTime" placeholder="ie 2:00PM" onChange={handleInputChangeI} value={interviewData.interviewTime}/>
+
+</div>
+
+<br/>
+<div className="form-group">
+    <label for="date"><strong>Where is it?</strong> </label>
+    <input type="input" className="form-control" id="interviewLocation" name="interviewLocation" aria-describedby="interviewLocation"
+        placeholder="ie virtual or on-site" onChange={handleInputChangeI} value={interviewData.interviewLocation}/>
+
+</div>
+<br/>
+<div class="hidden">
+                <label for="pet-type"><strong>Type</strong></label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" value={true} name="interview" onSiteChanged={handleRadioChangeI} checked/>
+                </div>
+                </div>
+
+    <button type="submit" onClick={handleFormSubmitI}>Update Status</button>
+
 </form>
 </div>
 </div>
