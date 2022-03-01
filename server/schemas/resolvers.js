@@ -62,6 +62,13 @@ const resolvers = {
             );
             return changeInt;
           },
+          editRejection: async (parent, { applicationId, dateRejected }) => {
+            const changeRej = await Application.findOneAndUpdate(
+              { _id: applicationId },
+              { $set: {rejection: true }, dateRejected: dateRejected},
+            );
+            return changeRej;
+          },
         addNote: async (parent, { applicationId, noteText }) => {
             return Application.findOneAndUpdate(
               { _id: applicationId },
