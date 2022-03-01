@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useMutation } from '@apollo/client';
 import { QUERY_APPLICATIONS } from '../utils/queries';
-import { EDIT_INTERVIEW, ADD_APPLICATION } from '../utils/mutations';
+import { EDIT_INTERVIEW, ADD_APPLICATION, EDIT_REJECTION } from '../utils/mutations';
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -99,6 +99,47 @@ const handleFormSubmitI = async (event) => {
 window.location.reload();
 }
 
+const [editRejection, {error2}] = useMutation(EDIT_REJECTION);
+const [rejectionData, setRejectionData] = useState({ 
+  dateRejected: '',
+  rejection: true,
+  rejectionId: ''
+
+})
+const handleInputChangeR = (event) => {
+  const { name, value } = event.target;
+  // console.log('hello')
+  // console.log(event.currentTarget.id)
+  setRejectionData({...rejectionData, [name]: value})
+  // console.log(...rejectionData)
+}
+
+const handleFormSubmitR = async (event) => {
+event.preventDefault();
+console.log('hello')
+// console.log(rejectionData.interviewDate)
+setRejectionData({rejection: true})
+console.log({...rejectionData})
+try{
+const { data } = await editRejection({ 
+  variables: {
+    dateRejected: rejectionData.dateRejected,
+    rejection: rejectionData.rejection,
+    applicationId: rejectionData.rejectionId}
+})
+console.log(data)
+setRejectionData({
+  dateRejected: '',
+  applicationId: '',
+})
+} catch (e) {
+console.error(e)
+}
+window.location.reload();
+}
+
+
+
 const handleRadioChangeI = async (event) =>{
   setInterviewData({interview: true})
 }
@@ -121,6 +162,15 @@ const handleRadioChangeI = async (event) =>{
   };
   const hideModalI = () => {
     setIsOpenI(false)
+  };
+
+  const [isOpenR, setIsOpenR] = useState('');
+  const showModalR = (e) => {
+    setRejectionData({rejectionId: e.currentTarget.id})
+    setIsOpenR({ show: true })
+  };
+  const hideModalR = () => {
+    setIsOpenR(false)
   };
   
 
@@ -174,6 +224,8 @@ const handleRadioChangeI = async (event) =>{
                       </button>
                       <button
                         type="button"
+                        onClick={showModalR}
+                        id={application._id}
                         className="rejectionBtn"
                       //   onClick={() => removeApplication(application.id)}
                       >
@@ -322,6 +374,42 @@ const handleRadioChangeI = async (event) =>{
                 </div>
 
     <button type="submit" onClick={handleFormSubmitI}>Update Status</button>
+
+</form>
+</div>
+</div>
+</div>
+
+
+      </Modal>
+
+      <Modal
+        show={isOpenR}
+        onHide={hideModalR}
+        size='lg'
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <div className="modal-header border-0"><button className="btn-close" type="button" onClick={handleFormSubmitR, hideModalR} data-bs-dismiss="modal" aria-label="Close"></button></div><div className="modal-body  pb-1">
+    <div className="container">
+        <div className="row ">
+            <div className="col">
+
+            </div>
+                <form className="mt-4 new-app" onSubmit={handleFormSubmitR}>
+
+<h2 className="text-center">Keep your head up!</h2>
+<div className="form-group">
+    <label for="dateRejected"><strong>When was your application rejected?</strong></label>
+    <input type="input" className="form-control dateRejected" id="dateRejected" name="dateRejected"
+        aria-describedby="dateRejected" placeholder="ie 04/15/2022" onChange={handleInputChangeR} value={rejectionData.dateRejected}/>
+       
+
+</div>
+<br/>
+
+
+    <button type="submit" onClick={handleFormSubmitR}>Update Status</button>
 
 </form>
 </div>
