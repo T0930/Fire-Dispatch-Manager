@@ -50,13 +50,9 @@ const typeDefs = gql`
     removeApplication(applicationId: ID!): Application
     removeNote(applicationId: ID!, noteId: ID!): Application
     editInterview(applicationId: ID!, interviewDate: String, interviewTime: String, interviewLocation: String): Application
-<<<<<<< HEAD
+    editRejection(applicationId: ID!, dateRejected: String): Application
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-=======
-    editRejection(applicationId: ID!, dateRejected: String): Application
->>>>>>> main
-
   }
 
   type Auth {
