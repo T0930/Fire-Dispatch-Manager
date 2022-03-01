@@ -28,43 +28,33 @@ const resolvers = {
 
 
     Mutation: {
-        addUser: async (parent, { name, email, password }) => {
-            const profile = await User.create({ name, email, password });
-            const token = signToken(profile);
-            return { token, profile };
-        },
+        // addUser: async (parent, { name, email, password }) => {
+        //     const profile = await User.create({ name, email, password });
+        //     const token = signToken(profile);
+        //     return { token, profile };
+        // },
         
-        login: async (parent, { email, password }) => {
-          const user = await User.findOne({ email });
+        // login: async (parent, { email, password }) => {
+        //   const user = await User.findOne({ email });
     
-          if (!user) {
-            throw new AuthenticationError('No user found with this email address');
-          }
+        //   if (!user) {
+        //     throw new AuthenticationError('No user found with this email address');
+        //   }
     
-          const correctPw = await user.isCorrectPassword(password);
+        //   const correctPw = await user.isCorrectPassword(password);
     
-          if (!correctPw) {
-            throw new AuthenticationError('Incorrect credentials');
-          }
+        //   if (!correctPw) {
+        //     throw new AuthenticationError('Incorrect credentials');
+        //   }
     
-          const token = signToken(user);
+        //   const token = signToken(user);
     
-          return { token, user };
-        },
+        //   return { token, user };
+        // },
 
         addApplication: async (parent, args) => {
             return Application.create(args, { new: true });
           },
-          // editInterview: async (parent, { applicationId, interview, interviewDate, interviewLocation, interviewTime }) => {
-          //   const changeInt = await Application.findOneAndUpdate(
-          //     { _id: applicationId },
-          //     { 
-          //       $set: {interview: true, interviewDate: interviewDate, interviewLocation: interviewLocation, interviewTime: interviewTime }
-          //     },
-          //     { new: true }
-          //   );
-          //   return changeInt;
-          // },
           editInterview: async (parent, { applicationId, interviewDate, interviewLocation, interviewTime }) => {
             const changeInt = await Application.findOneAndUpdate(
               { _id: applicationId },
