@@ -9,6 +9,7 @@ import Inactive from '../pages/Inactive'
 import Interviews from '../pages/Interviews'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
+import Signup from '../pages/Signup'
 
 
 const client = new ApolloClient({
@@ -48,6 +49,12 @@ function Dashboard() {
       </Route>
       <Route exact path="/">
               <Home />
+        </Route>
+        <Route path="/Login">
+              <Login />
+        </Route>
+        <Route path="/Signup">
+              <Signup />
         </Route>
 
 
