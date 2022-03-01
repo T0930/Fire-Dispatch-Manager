@@ -202,26 +202,6 @@ export default function Home() {
         </div>
 
 
-    {/* <div className="hidden">
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value={false} name="rej" checked/> rejection
-        </div>
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value={false} name="inter" checked/>
-            Interview
-
-        </div>
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value="null" name="dateRej" checked/> Date
-            rejected
-
-        </div>
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value="null" name="intDate" checked/>
-            Interview date
-
-        </div>
-    </div> */}
     <br/>
 
 

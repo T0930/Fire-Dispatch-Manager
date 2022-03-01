@@ -54,3 +54,32 @@ ul {
 .nav-item {
     color: white;
 } */
+
+.noteBtn {
+    text-align: right;
+}
+.notesBtn {
+    background-color: darkmagenta;
+    color: white;
+    font-size: large;
+    margin-top: 5px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+.notesBtn2 {
+    background-color: teal;
+    color: white;
+    font-size: large;
+    margin-top: -20px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+.custom-card-sing-app {
+    margin-top: 20px;
+}
