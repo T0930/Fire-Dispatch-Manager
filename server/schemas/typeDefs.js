@@ -38,7 +38,14 @@ const typeDefs = gql`
     addNote(applicationId: ID!, noteText: String!): Application
     removeApplication(applicationId: ID!): Application
     removeNote(applicationId: ID!, noteId: ID!): Application
-    editInterview(applicationId: ID!, interview: Boolean): Application
+  editInterview(applicationId: ID!, interview: Boolean): Application
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+  }
+
+  type Auth {
+    token: ID!
+    user: User
   }
 `;
 
