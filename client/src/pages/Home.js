@@ -40,23 +40,23 @@ export default function Home() {
   const [editInterview, {error}] = useMutation(EDIT_INTERVIEW);
 
 
-  // let color =''
+  let color =''
 
-  // for (let i = 0; i < applications.length; i++) {
-  //   const element = applications[i].interview
-  //     console.log(element)
-  //     switch (element) {
-  //       case true:
-  //         color = "blue";
-  //         break;
-  //         case false:
-  //           color = "green";
-  //           break;
-  //         default:
-  //           color ="black"
-  //     }
-  // } 
-  // console.log(color)
+  for (let i = 0; i < applications.length; i++) {
+    const element = applications[i].interview
+      console.log(element)
+      switch (element) {
+        case true:
+          color = "blue";
+          break;
+          case false:
+            color = "green";
+            break;
+          default:
+            color ="black"
+      }
+  } 
+  console.log(color)
 
 
 
@@ -110,7 +110,7 @@ export default function Home() {
                     <td>
                       <button
                         type="button"
-                        className="yayInterview"
+                        className="interviewBtn"
                         onClick={() => editInterview(application._id)}
                         // onClick={() => console.log(application._id)}
                       >
