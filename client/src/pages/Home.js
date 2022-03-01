@@ -2,23 +2,55 @@ import { React, useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useMutation } from '@apollo/client';
 import { QUERY_APPLICATIONS } from '../utils/queries';
-import { EDIT_INTERVIEW } from '../utils/mutations';
+import { EDIT_INTERVIEW, ADD_APPLICATION } from '../utils/mutations';
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faAnglesRight} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+
+
 const check = <FontAwesomeIcon icon={faCheck} size="1x" fixedWidth className="check"/>
 const reject = <FontAwesomeIcon icon={faXmark} size="1x" fixedWidth className="reject"/>
 const angles = <FontAwesomeIcon icon={faAnglesRight} size="1x" fixedWidth className="moreInfo"/>
 
 
 export default function Home() {
-
+  const [applicationData, setApplicationData] = useState({ 
+    companyName: '',
+    position: '',
+    dateApplied: '',
+  })
+  const [ addApplication ]  = useMutation(ADD_APPLICATION);
   const { loading, data } = useQuery(QUERY_APPLICATIONS);
   const applications = data?.applications || [];
   console.log(applications)
+
+  // add handleInputChange which would accept any changes in input fields
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setApplicationData({...applicationData, [name]: value})
+  }
+  // add handleFormSubmit 
+const handleFormSubmit = async (event) => {
+  event.preventDefault();
+  console.log(applicationData.dateApplied)
+  try{
+  const { data } = await addApplication({ 
+    variables: {...applicationData}
+  })
+  console.log(data)
+  setApplicationData({
+    companyName: '',
+    position: '',
+    dateApplied: '',
+  })
+} catch (e) {
+  console.error(e)
+}
+window.location.reload();
+}
 
   // const [interview, setInterview] = useState('');
   // // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
@@ -68,8 +100,7 @@ export default function Home() {
     setIsOpen(false)
   };
 
-
- 
+  
 
   return (
     <div>
@@ -156,12 +187,14 @@ export default function Home() {
             <div className="col">
 
             </div>
-                <form className="mt-4 new-app">
+                <form className="mt-4 new-app" onSubmit={handleFormSubmit}>
+                  {/* add onsubmit as attribute with handleformsubmit inside form*/}
 
 <div className="form-group">
     <label for="companyName"><strong>Company Name*</strong></label>
     <input type="input" className="form-control companyName" id="companyName" name="companyName"
-        aria-describedby="companyName" placeholder="Company Name"/>
+        aria-describedby="companyName" placeholder="Company Name" onChange={handleInputChange} value={applicationData.companyName}/>
+        {/* add 2 attributes inside input 1 being onChange set = {handleinputchange} the other being value set = applicationData.whateverinfo (companyName)  */}
 
 </div>
 
@@ -169,29 +202,29 @@ export default function Home() {
 <div className="form-group">
     <label for="age"><strong>Position Title*</strong> </label>
     <input type="input" className="form-control" id="position" name="position"
-        aria-describedby="position" placeholder="Position Title"/>
+        aria-describedby="position" placeholder="Position Title" onChange={handleInputChange} value={applicationData.position}/>
 
 </div>
 
 <br/>
 <div className="form-group">
     <label for="date"><strong>Date Applied*</strong> </label>
-    <input type="input" className="form-control" id="date" name="date" aria-describedby="date"
-        placeholder="ie 02/05/2021"/>
+    <input type="input" className="form-control" id="date" name="dateApplied" aria-describedby="date"
+        placeholder="ie 02/05/2021" onChange={handleInputChange} value={applicationData.dateApplied}/>
 
 </div>
 <br/>
 <div className="form-group">
     <label for="location"><strong>Location</strong></label>
     <input type="input" className="form-control" id="location" name="location"
-        aria-describedby="location" placeholder="City, State or Remote"/>
+        aria-describedby="location" placeholder="City, State or Remote" onChange={handleInputChange} value={applicationData.location}/>
 
 </div>
 <br/>
 <div className="form-group">
     <label for="description"><strong>Job Description</strong></label>
     <textarea type="input" className="form-control" id="description" name="description"
-        aria-describedby="description" row="3" placeholder=""></textarea>
+        aria-describedby="description" row="3" placeholder="" onChange={handleInputChange} value={applicationData.description}></textarea>
 
 </div>
 <br/>
@@ -205,12 +238,7 @@ export default function Home() {
     <br/>
 
 
-
-
-
-
-
-    <button type="submit">Add application</button>
+    <button type="submit" onClick={handleFormSubmit}>Add application</button>
     <p>* indicates required field </p>
 </form>
 </div>
