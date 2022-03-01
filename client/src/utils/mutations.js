@@ -22,10 +22,12 @@ mutation addApplication($companyName: String!, $position: String!, $dateApplied:
 //     }
 //   }
 export const EDIT_INTERVIEW = gql`
-mutation editInterview($applicationId: ID!, $interview: Boolean) {
-  editInterview (applicationId: $applicationId, interview: $interview) {
-    _id
+mutation editInterview($applicationId: ID!, $interviewDate: String, $interviewTime: String, $interviewLocation: String) {
+  editInterview(applicationId: $applicationId, interviewDate: $interviewDate, interviewTime: $interviewTime, interviewLocation: $interviewLocation) {
     interview
+    interviewDate
+    interviewTime
+    interviewLocation
   }
 }
 `;

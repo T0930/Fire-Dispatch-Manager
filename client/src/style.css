@@ -20,9 +20,9 @@ ul {
     width: 100%;
   }
 
-  .hidden {
+  /* .hidden {
     display: none;
-}
+} */
 
 .interviewBtn {
     background-color: white;
