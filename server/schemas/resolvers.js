@@ -34,10 +34,8 @@ const resolvers = {
         //     return { token, profile };
         // },
 
-        addApplication: async (parent, { companyName, position, dateApplied,  description,
-             location}) => {
-            return Application.create({ companyName, position, dateApplied, description,
-                location });
+        addApplication: async (parent, args) => {
+            return Application.create(args, { new: true });
           },
           editInterview: async (parent, { applicationId, interview }) => {
             const changeInt = await Application.findOneAndUpdate(

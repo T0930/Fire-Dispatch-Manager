@@ -2,11 +2,15 @@ import { gql } from '@apollo/client';
 
 
 export const ADD_APPLICATION = gql`
-mutation addApplication($companyName: String!, $position: String!, $dateApplied: String!) {
-    addApplication (companyName: $companyName, position: $position, dateApplied: $dateApplied, description: $description, location: $location) {
+mutation addApplication($companyName: String!, $position: String!, $dateApplied: String!, $location: String, $description: String) {
+    addApplication (companyName: $companyName, position: $position, dateApplied: $dateApplied, location: $location, description: $description) {
+     
       companyName
       position
       dateApplied
+      location
+      description
+
     }
   }
   `;
