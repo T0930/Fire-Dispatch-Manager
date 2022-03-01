@@ -17,6 +17,13 @@ const typeDefs = gql`
     interviewLocation: String
     createdAt: String
   }
+  
+  type User {
+    _id: ID
+    username: String
+    email: String
+    password: String
+  }
 
   type Note {
     _id: ID
@@ -29,6 +36,9 @@ const typeDefs = gql`
     application(applicationId: ID!): Application
     interview(interview: Boolean): [Application]
     rejection(rejection: Boolean): [Application]
+    users: [User]
+    user(username: String!): User
+    me: User
 
   }
 
@@ -41,7 +51,13 @@ const typeDefs = gql`
     removeNote(applicationId: ID!, noteId: ID!): Application
     editInterview(applicationId: ID!, interviewDate: String, interviewTime: String, interviewLocation: String): Application
     editRejection(applicationId: ID!, dateRejected: String): Application
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+  }
 
+  type Auth {
+    token: ID!
+    user: User
   }
 
 `;

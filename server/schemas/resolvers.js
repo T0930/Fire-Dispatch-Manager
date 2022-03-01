@@ -1,6 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { Application } = require('../models');
-// const { User } = require('../models');
+const { User } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
@@ -16,6 +17,13 @@ const resolvers = {
       rejection: async(parent, {rejection}, context, info) => {
         return Application.find({rejection: true});
       },
+      users: async () => {
+        return User.find();
+      },
+      user: async (parent, { username }) => {
+        return User.findOne({ username });
+      },
+
 
 
     //   me: async (parent, args, context) => {
@@ -28,29 +36,29 @@ const resolvers = {
 
 
     Mutation: {
-        // addUser: async (parent, { name, email, password }) => {
-        //     const profile = await User.create({ name, email, password });
-        //     const token = signToken(profile);
-        //     return { token, profile };
-        // },
+        addUser: async (parent, { username, email, password }) => {
+            const profile = await User.create({ username, email, password });
+            const token = signToken(profile);
+            return { token, profile };
+        },
         
-        // login: async (parent, { email, password }) => {
-        //   const user = await User.findOne({ email });
+        login: async (parent, { email, password }) => {
+          const user = await User.findOne({ email });
     
-        //   if (!user) {
-        //     throw new AuthenticationError('No user found with this email address');
-        //   }
+          if (!user) {
+            throw new AuthenticationError('No user found with this email address');
+          }
     
-        //   const correctPw = await user.isCorrectPassword(password);
+          const correctPw = await user.isCorrectPassword(password);
     
-        //   if (!correctPw) {
-        //     throw new AuthenticationError('Incorrect credentials');
-        //   }
+          if (!correctPw) {
+            throw new AuthenticationError('Incorrect credentials');
+          }
     
-        //   const token = signToken(user);
+          const token = signToken(user);
     
-        //   return { token, user };
-        // },
+          return { token, user };
+        },
 
         addApplication: async (parent, args) => {
             return Application.create(args, { new: true });
