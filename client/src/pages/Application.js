@@ -1,4 +1,5 @@
-import React from 'react';
+import Modal from "react-bootstrap/Modal";
+import { React, useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
@@ -19,11 +20,20 @@ const Application = () => {
     const allNotes = applications.notes
     // console.log(allNotes[1].noteText)
   
+    const [isOpen, setIsOpen] = useState(false);
+    const showModal = (e) => {
+      setIsOpen({ show: true })
+    };
+    const hideModal = () => {
+      setIsOpen(false)
+    };
+
+
     if (loading) {
       return <div>Loading...</div>;
     }
     return (
-        <div className="card">
+        <div className="card custom-card-sing-app">
         <h4 className="card-header text-center">
           {applications.companyName}
         </h4>
@@ -39,9 +49,57 @@ const Application = () => {
 
 
                 ))}</div>
+                <div className="noteBtn">
+      <button
+        type="button"
+        onClick={showModal}
+       className="notesBtn" 
+      >
+        <span role="img" aria-label="close">
+          Add Note
+        </span>
+      </button>
+</div>
+      <Modal
+        show={isOpen}
+        onHide={hideModal}
+        size='lg'
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <div className="modal-header border-0"><button className="btn-close" type="button" onClick={hideModal} data-bs-dismiss="modal" aria-label="Close"></button></div><div className="modal-body  pb-2">
+    <div className="container">
+        <div className="row ">
+            <div className="col">
+
+            </div>
+                <form className="mt-4 new-app">
+
+
+<div className="form-group">
+
+    <textarea type="input" className="form-control" id="notes" name="notes" aria-describedby="notes"
+        rows="5" placeholder=""></textarea>
+        </div>
+
+
+    <br/>
 
 
 
+
+
+
+<div className="noteBtn">
+    <button type="submit" className="notesBtn2">Add Note</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+
+      </Modal>
 
 
 
