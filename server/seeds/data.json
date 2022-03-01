@@ -50,7 +50,8 @@
         "description": "The Arizona Attorney General's Office Criminal Division/Special Investigations Section is seeking a Special Agent assigned to Health Care Fraud (HCFA) in Prescott. As a Special Agent, the position will coordinate closely with supervisors.",
         "location": "Prescott, AZ",
         "notes": [{
-            "noteText": "I guess they didn’t like me"}],
+            "noteText": "I guess they didn’t like me"},
+            {"noteText": "hello"}],
         "interview": false,
         "interviewDate": "08/28/2021",
         "interviewTime": "05:00 PM"

@@ -17,6 +17,18 @@ mutation addApplication($companyName: String!, $position: String!, $dateApplied:
 //       position
 //     }
 //   }
+export const EDIT_INTERVIEW = gql`
+mutation editInterview($applicationId: ID!, $interview: Boolean) {
+  editInterview (applicationId: $applicationId, interview: $interview) {
+    _id
+    interview
+  }
+}
+`;
+
+
+
+
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {

@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { QUERY_APPLICATIONS } from '../utils/queries';
+import { EDIT_INTERVIEW } from '../utils/mutations';
 import Modal from "react-bootstrap/Modal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
@@ -18,7 +20,27 @@ export default function Home() {
   const applications = data?.applications || [];
   console.log(applications)
 
-  let color = []
+  // const [interview, setInterview] = useState('');
+  // // Invoke `useMutation()` hook to return a Promise-based function and data about the ADD_PROFILE mutation
+  // const [editInterview, { error }] = useMutation(EDIT_INTERVIEW);
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   // Since mutation function is async, wrap in a `try...catch` to catch any network errors from throwing due to a failed request.
+  //   try {
+  //     // Execute mutation and pass in defined parameter data as variables
+  //     const { data } = await editInterview({
+  //       variables: { interview },
+  //     });
+  //     window.location.reload();
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+
+  const [editInterview, {error}] = useMutation(EDIT_INTERVIEW);
+
+
+  let color =''
 
   for (let i = 0; i < applications.length; i++) {
     const element = applications[i].interview
@@ -70,6 +92,7 @@ export default function Home() {
                 <th>Date Applied</th>
                   <th>Company Name</th>
                   <th>Position</th>
+                  <th>Interview</th>
                   <th>Location</th>
                   <th>Update</th>
                 </tr>
@@ -81,13 +104,15 @@ export default function Home() {
                     <td>{application.dateApplied}</td>
                     <td style = {{color}}>{application.companyName}</td>
                     <td>{application.position}</td>
+                    <td>{application.interview.toString()}</td>
                     <td>{application.location}</td>
 
                     <td>
                       <button
                         type="button"
                         className="interviewBtn"
-                      //   onClick={() => removeApplication(application.id)}
+                        onClick={() => editInterview(application._id)}
+                        // onClick={() => console.log(application._id)}
                       >
                         <a className="check">{check}</a>
                       </button>
@@ -177,26 +202,6 @@ export default function Home() {
         </div>
 
 
-    {/* <div className="hidden">
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value={false} name="rej" checked/> rejection
-        </div>
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value={false} name="inter" checked/>
-            Interview
-
-        </div>
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value="null" name="dateRej" checked/> Date
-            rejected
-
-        </div>
-        <div className="form-check">
-            <input type="radio" className="form-check-input" value="null" name="intDate" checked/>
-            Interview date
-
-        </div>
-    </div> */}
     <br/>
 
 
