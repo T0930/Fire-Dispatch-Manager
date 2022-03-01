@@ -141,7 +141,7 @@ window.location.reload();
                     <td>
                       <button
                         type="button"
-                        className="yayInterview"
+                        className="interviewBtn"
                         onClick={() => editInterview(application._id)}
                         // onClick={() => console.log(application._id)}
                       >
@@ -231,11 +231,10 @@ window.location.reload();
 <div className="form-group">
     <label for="notes"><strong>Additional Notes</strong></label>
     <textarea type="input" className="form-control" id="notes" name="notes" aria-describedby="notes"
-        row="3" placeholder="" onChange={handleInputChange} value={applicationData.notes}></textarea>
+        row="3" placeholder=""></textarea>
         </div>
 
-         
-   
+
     <br/>
 
 

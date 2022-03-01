@@ -42,6 +42,8 @@ export const QUERY_SINGLE_APPLICATION = gql`
       companyName
       position
       description
+      dateApplied
+      location
       notes {
         noteText
       }
