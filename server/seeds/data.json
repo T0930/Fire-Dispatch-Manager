@@ -1,60 +1,71 @@
 [
     {
-        "companyName": "Fred G. Acosta Job Corps Center",
-        "position": "Head Security Guard",
-        "dateApplied": "01/08/2022",
+        "companyName": "MIND 24-7",
+        "position": "Software Developer",
+        "dateApplied": "2/15/2022",
         "rejection": false,
         "dateRejected": "",
-        "description": "Responsible for assisting the Police Department in insuring the safety of citizens utilizing the recreational facilities of the Idle Hour Sports Complex, Nature Trail, Moon Lake, Tennis Courts and surrounding recreational facilities. Also responsible for assisting the Police Department in preventing vandalism of facilities. Maintain workplace in a clean and orderly manner. May be required to perform light janitorial duties.",
-        "location": "Tucson, AZ",
+        "description": "The Software Developer will be involved in design, development, coding, customization, configuration, testing, and deployment in support of enterprise solutions. You will be responsible for sourcing project requirements, deciding on the most appropriate software solutions, and ensuring that developments are error-free.  Build high-quality scalable and predictable web applications on the Microsoft technology stack and maintain internal and external facing web applications using C#.  Collaborate with specialized teams from across the organization to develop and design solutions for technical business problems that increase staff productivity and help them achieve their financial goals  ",
+        "location": "Scottsdale, AZ",
         "notes": [{
-            "noteText": "I guess they didn’t like me"}],
+            "noteText": "Listed technology: ASP.NET, SQL Server, HTML, CSS, JavaScript, and C#"},
+            {
+                "noteText": "Link to company website: https://www.mind24-7.com/"},
+                {
+                    "noteText": "Link to job posting: https://recruiting.myapps.paychex.com/appone/MainInfoReq.asp?R_ID=4362153&B_ID=91&fid=1&Adid=0&ssbgcolor=17143A&SearchScreenID=18906&CountryID=3&LanguageID=2"}],
         "interview": false,
-        "interviewDate": "01/28/2022",
-        "interviewTime": "03:00 PM",
-        "interviewLocation": "Virtual"
+        "interviewDate": "",
+        "interviewTime": "",
+        "interviewLocation": ""
     },
     {
-        "companyName": "Universal Logistics Holdings",
-        "position": "Data Analyst ",
-        "dateApplied": "11/12/2021",
+        "companyName": "Novacoast",
+        "position": "Junior Software Developer",
+        "dateApplied": "2/16/2022",
         "rejection": false,
-        "dateRejected": "01/05/2022",
-        "description": "Universal Logistics Holdings, Inc. (ULH) is a leading asset-light provider of customized transportation and logistics solutions. We provide our customers with supply chain solutions that can be scaled to meet your changing demands and volumes. We offer a comprehensive suite of services including transportation, value-added, intermodal and specialized services that can be utilized throughout your entire supply chain. Universal's experienced management team, with its state-of-the-art technology, provides customized logistics solutions to its customers resulting in proven efficiencies and savings.",
+        "dateRejected": "",
+        "description": "novaSOC is looking for a talented junior or mid-level Software Developer to be part of an agile development team building and improving a SOCaaS (Security Operations Center as a Service) platform. The ideal candidate have strong skills in Python development, experience with REST APIs and some familiarity with Cybersecurity and Big Data concepts.",
+        "location": "Phoenix, AZ",
+        "notes": [{
+            "noteText": "Required experience: 2 years with Python, HTML/CSS and Javascript"},
+            {
+                "noteText": "Flexible, onsite remote work environment"},
+                {
+                    "noteText": "Link to company website: https://www.novacoast.com/"}],
+        "interview": false,
+        "interviewDate": "",
+        "interviewTime": "",
+        "interviewLocation": ""
+    },
+    {
+        "companyName": "General Motors",
+        "position": "Front End UI/UX Software Developer",
+        "dateApplied": "2/25/2022",
+        "rejection": false,
+        "dateRejected": "",
+        "description": "As Front-End Software Engineers, we are responsible for new and innovative software development and design of beautiful user interfaces and experiences. Our engineers work in highly collaborative environments working across many subject areas. We regularly work on cutting edge technologies - understanding and inventing new designs and integration patterns along the way",
+        "location": "Chandler, AZ",
+        "notes": [{
+            "noteText": "Minimum qualifications: 3+ years experience with JavaScript frameworks like React/Angular/Vue; 3+ years exeperience with HTML, CSS, and Javascript; experience with CSS preprocessors (SASS, LESS, SCSS)"},
+                {
+                    "noteText": "Link to job posting: https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Austin-Texas-United-States-of-America/Front-End-UI-UX-Software-Engineer_JR-000035552?src=JB-11300&source=Indeed"}],
+        "interview": false,
+        "interviewDate": "",
+        "interviewTime": "",
+        "interviewLocation": ""
+    },
+    {
+        "companyName": "Pax Technology, Inc",
+        "position": "Software Development Engineer in Test",
+        "dateApplied": "2/26/2022",
+        "rejection": false,
+        "dateRejected": "",
+        "description": "The Software Development Engineer in Test is energetic and enjoys taking ownership of assigned projects and comfortable working independently or working in collaboration with other team members. Design and develop software test automation framework. Develop automation test scripts for hosted applications. Responsible for configuring continuous integration across multiple test environments.",
         "location": "Tempe, AZ",
         "notes": [{
-            "noteText": "I guess they didn’t like me"}],
-        "interview": false,
-        "interviewDate": "12/20/2021",
-        "interviewTime": "01:00 PM",
-        "interviewLocation": "Virtual"
-    },
-    {
-        "companyName": "Kett Engineering",
-        "position": "Autonomous Vehicle Trainer",
-        "dateApplied": "10/20/2021",
-        "rejection": false,
-        "dateRejected": "01/05/2022",
-        "description": "Under the direction of Learning & Development, conducts in-person classroom training and behind-the-wheel training for new and existing drivers and operators. Also provides training to new and experienced personnel in support roles. Evaluates learners, provides coaching, and records learner progress in learning management system. Performs the job and duties of Driver and/or Operator when not actively training. Estimated time spent training is 80% of their time.",
-        "location": "Surprise, AZ",
-        "notes": [{
-            "noteText": "I guess they didn’t like me"}],
-        "interview": false,
-        "interviewDate": "11/18/2021",
-        "interviewTime": "02:00 PM",
-        "interviewLocation": "Virtual"
-    },
-    {
-        "companyName": "State of Arizona",
-        "position": "SPECIAL AGENT",
-        "dateApplied": "08/25/2021",
-        "rejection": false,
-        "dateRejected": "09/05/2022",
-        "description": "The Arizona Attorney General's Office Criminal Division/Special Investigations Section is seeking a Special Agent assigned to Health Care Fraud (HCFA) in Prescott. As a Special Agent, the position will coordinate closely with supervisors.",
-        "location": "Prescott, AZ",
-        "notes": [{
-            "noteText": "I guess they didn’t like me"},
-            {"noteText": "hello"}],
+            "noteText": "Minimum qualifications: 5 years development in Java, C++ or C#, scipting experience with JS, Node, Perl, PHP, automation experience using Selenium WebDriver, JMeter, JUnit or TestNG"},
+                {
+                    "noteText": "Link to job posting: https://generalmotors.wd5.myworkdayjobs.com/en-US/Careers_GM/job/Austin-Texas-United-States-of-America/Front-End-UI-UX-Software-Engineer_JR-000035552?src=JB-11300&source=Indeed"}],
         "interview": false,
         "interviewDate": "08/28/2021",
         "interviewTime": "05:00 PM",
@@ -63,7 +74,7 @@
     {
         "companyName": "Revature",
         "position": "Junior Software Developer",
-        "dateApplied": "02/18/2022",
+        "dateApplied": "02/28/2022",
         "rejection": false,
         "dateRejected": "",
         "description": "Writing and debugging code. Troubleshooting software issues. Working closely with developers to improve product's functionality. Developing innovative solutions. Attending developer meetings. Participating in code reviews and quality assurance activities. Participating in estimation discussions with the product team.",
@@ -80,11 +91,11 @@
         "position": "Software Engineer",
         "dateApplied": "01/22/2022",
         "rejection": true,
-        "dateRejected": "2/10/2022",
+        "dateRejected": "02/10/2022",
         "description": "Designing, integrating and implementing application software for Vibrant America/Wellness. Work on cutting edge customer facing applications. Work with business groups and other developers to improve old applications and implemenet new ones.",
-        "location": "San Carlos, CA",
+        "location": "Mesa, AZ",
         "notes": [{
-            "noteText": "lack experience and technical skills for a role this high up"}],
+            "noteText": ""}],
         "interview": false,
         "interviewDate": "",
         "interviewTime": "",
@@ -93,13 +104,13 @@
     {
         "companyName": "Vanlo",
         "position": "Junior Software Engineer",
-        "dateApplied": "12/28/2021",
-        "rejection": false,
-        "dateRejected": "",
+        "dateApplied": "01/28/2022",
+        "rejection": true,
+        "dateRejected": "02/15/2022",
         "description": "Responsible for assisting the Police Department in insuring the safety of citizens utilizing the recreational facilities of the Idle Hour Sports Complex, Nature Trail, Moon Lake, Tennis Courts and surrounding recreational facilities. Also responsible for assisting the Police Department in preventing vandalism of facilities. Maintain workplace in a clean and orderly manner. May be required to perform light janitorial duties.",
-        "location": "remote",
+        "location": "Remote",
         "notes": [{
-            "noteText": "I guess they didn’t like me"}],
+            "noteText": ""}],
         "interview": false,
         "interviewDate": "01/28/2022",
         "interviewTime": "03:00 PM",
@@ -109,31 +120,16 @@
         "companyName": "TalentLyft",
         "position": "JavaScript Developer",
         "dateApplied": "02/15/2022",
-        "rejection": false,
-        "dateRejected": "",
-        "description": "Develop and enhance main front end platforms. Developer new user-facing features. Design and develop new front end applications for various platforms. Develop specifications and designs for complex applications or modifying/maintaing complex existing applications.",
-        "location": "remote",
-        "notes": [{
-            "noteText": "I might actually get this one"}],
-        "interview": true,
-        "interviewDate": "03/15/2022",
-        "interviewTime": "01:30 PM",
-        "interviewLocation": "Virtual"
-    },
-    {
-        "companyName": "CUNA Mutual Group",
-        "position": "Data Manager",
-        "dateApplied": "01/24/2022",
         "rejection": true,
-        "dateRejected": "2/18/2022",
-        "description": "Manage and oversee all data systems. Determine methods for quality data collection. Create and implement policies and procedures for data management. Ensure adequacy, accuracy, and legitimacy of data. Implement effective and secure procedures for data processing. Support others in the daily use of data systems. Ensure adherence to legal and company standards. Evaluate performance of data systems. ",
-        "location": "remote",
+        "dateRejected": "02/28/2022",
+        "description": "Develop and enhance main front end platforms. Developer new user-facing features. Design and develop new front end applications for various platforms. Develop specifications and designs for complex applications or modifying/maintaing complex existing applications.",
+        "location": "Remote",
         "notes": [{
-            "noteText": "bombed the technical interview"}],
-        "interview": true,
-        "interviewDate": "02/17/2022",
-        "interviewTime": "03:00 PM",
-        "interviewLocation": "On-Site"
+            "noteText": ""}],
+        "interview": false,
+        "interviewDate": "",
+        "interviewTime": "",
+        "interviewLocation": ""
     }
 
 ]

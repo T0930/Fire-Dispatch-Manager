@@ -8,9 +8,15 @@ ul {
     width: 100%;
   }
   th {
-    background: lightgreen;
+    background: rgb(228, 155, 146);
     padding: 10px;
   }
+
+  .customTh {
+    background: rgb(124, 200, 245);
+    padding: 10px;
+  }
+
   th,
   td {
     border: 1px solid grey;
@@ -59,7 +65,7 @@ ul {
     text-align: right;
 }
 .notesBtn {
-    background-color: darkmagenta;
+    background-color: rgb(68, 151, 29);
     color: white;
     font-size: large;
     margin-top: 5px;
@@ -82,6 +88,7 @@ ul {
 }
 .custom-card-sing-app {
     margin-top: 20px;
+    background-color: blue;
 }
 
 .loginBtn {
@@ -107,6 +114,44 @@ ul {
 
 .addAppBtn2 {
     background-color: rgb(102, 63, 102);
+    color: white;
+    font-size: large;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+.card-header {
+    background-color: rgb(13, 88, 110) !important;
+    color: white !important;
+}
+
+.note-card {
+    border: none !important;
+}
+
+.custom-header1 {
+    background-color: rgb(7, 176, 206) !important;
+    color: white !important;
+}
+
+.updateStatus {
+    background-color: rgb(54, 151, 34);
+    color: white;
+    font-size: large;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+.updateStatus2 {
+    background-color: rgb(151, 81, 34);
     color: white;
     font-size: large;
     margin-bottom: 20px;

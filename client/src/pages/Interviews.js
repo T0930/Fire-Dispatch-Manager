@@ -26,7 +26,7 @@ export default function Interviews() {
                 <div>
             {interviews.map((interview) => (
                 <div className="card custom-card-sing-app">
-                    <h4 className="card-header text-center">
+                    <h4 className="card-header text-center custom-header1">
                         {interview.companyName}
                     </h4>
                     <div className="card-body">
@@ -34,11 +34,12 @@ export default function Interviews() {
                         <h6 className="card-title text-center" style={{ color: 'red' }}>Interview Date: {interview.interviewDate}</h6>
                         <h6 className="card-title text-center" style={{ color: 'red' }}>Interview Time: {interview.interviewTime}</h6>
                         <h6 className="card-title text-center" style={{ color: 'red' }}>Interview Location: {interview.interviewLocation}</h6>
+                        <br/>
                         <p className="card-text"><strong>Job Description:</strong> {interview.description} </p>
                         <p className="card-text"><strong>Date Applied:</strong> {interview.dateApplied} </p>
                         <p className="card-text"><strong>Job Location:</strong> {interview.location} </p>
                         <p className="card-text"><strong>Notes:</strong> </p>
-                        <div className="card">
+                        <div className="card note-card">
                             {interview.notes.map((note) => (
                                 <p className="card-text">{note.noteText} </p>
 

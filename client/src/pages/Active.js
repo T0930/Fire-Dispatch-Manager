@@ -196,11 +196,11 @@ const handleRadioChangeI = async (event) =>{
             <table>
               <thead>
                 <tr>
-                <th>Date Applied</th>
-                  <th>Company Name</th>
-                  <th>Position</th>
-                  <th>Location</th>
-                  <th>Update</th>
+                <th className="customTh">Date Applied</th>
+                  <th className="customTh">Company Name</th>
+                  <th className="customTh">Position</th>
+                  <th className="customTh">Location</th>
+                  <th className="customTh">Update</th>
                 </tr>
               </thead>
 
@@ -375,7 +375,7 @@ const handleRadioChangeI = async (event) =>{
                 </div>
                 </div>
 
-    <button type="submit" onClick={handleFormSubmitI}>Update Status</button>
+    <button type="submit" onClick={handleFormSubmitI} className="updateStatus">Update Status</button>
 
 </form>
 </div>
@@ -411,7 +411,7 @@ const handleRadioChangeI = async (event) =>{
 <br/>
 
 
-    <button type="submit" onClick={handleFormSubmitR}>Update Status</button>
+    <button type="submit" onClick={handleFormSubmitR} className="updateStatus2">Update Status</button>
 
 </form>
 </div>
