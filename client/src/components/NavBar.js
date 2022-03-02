@@ -53,33 +53,7 @@ function NavBar(props)  {
                                             Rejections
                                         </a>
                                     </li>
-                                    <li className="nav-item mx-0 mx-lg-1">
-                                        <a
-                                            href="/inactive"
-                                            className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => props.handlePageChange('Inactive')}
-                                            className={props.currentPage === 'Inactive' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
-                                            Inactive
-                                        </a>
-                                    </li>
-                                    <li className="nav-item mx-0 mx-lg-1">
-                                        <a
-                                            href="/Login"
-                                            className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => props.handlePageChange('Login')}
-                                            className={props.currentPage === 'Login' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
-                                            Login
-                                        </a>
-                                    </li>
-                                    <li className="nav-item mx-0 mx-lg-1">
-                                        <a
-                                            href="/Signup"
-                                            className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => props.handlePageChange('Signup')}
-                                            className={props.currentPage === 'Signup' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
-                                            Signup
-                                        </a>
-                                    </li>
+
 
 
 
@@ -96,10 +70,10 @@ function NavBar(props)  {
                                 >
                                     
                                     <a
-                                            href="#Logout"
+                                            href="/Login"
                                             className="text-decoration-none" style={{ color: 'inherit' }}
-                                            onClick={() => props.handlePageChange('Logout')}
-                                            className={props.currentPage === 'Logout' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
+                                            onClick={() => props.handlePageChange('Login')}
+                                            className={props.currentPage === 'Login' ? 'nav-link active py-3 px-0 px-lg-3 rounded' : 'nav-link py-3 px-0 px-lg-3 rounded'}>
                                             Logout
                                         </a>
                                 </div>
