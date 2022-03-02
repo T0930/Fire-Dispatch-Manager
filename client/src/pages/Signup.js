@@ -40,7 +40,7 @@ const Signup = () => {
 
 
     return (
-        <main className="flex-row justify-center mb-4">
+        <main className="flex-row justify-center mt-4">
           <div className="col-12 col-lg-10">
             <div className="card">
               <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
@@ -53,6 +53,8 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <label for="exampleInputUsername2"
+               class="form-label custom-form-usrn"><strong>Username:</strong></label>
                 <input
                   className="form-input"
                   placeholder="Your username"
@@ -61,6 +63,10 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
+                <br/>
+                    <br/>
+               <label for="exampleInputEmail2"
+               class="form-label custom-form-usrn"><strong>Email Address:</strong></label>
                 <input
                   className="form-input"
                   placeholder="Your email"
@@ -69,6 +75,10 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <br/>
+                    <br/>
+               <label for="exampleInputPassword2"
+               class="form-label custom-form-usrn"><strong>Password:</strong></label>
                 <input
                   className="form-input"
                   placeholder="******"
@@ -77,8 +87,10 @@ const Signup = () => {
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <br/>
+                <br/>
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-dark"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
