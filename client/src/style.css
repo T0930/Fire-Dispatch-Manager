@@ -87,3 +87,32 @@ ul {
 .loginBtn {
     background-color: black
 }
+
+.addAppBtn {
+    background-color: rgb(102, 63, 102);
+    color: white;
+    font-size: large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+.addAppBtn1 {
+    text-align: right;
+}
+
+.addAppBtn2 {
+    background-color: rgb(102, 63, 102);
+    color: white;
+    font-size: large;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}

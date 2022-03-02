@@ -177,14 +177,17 @@ const handleRadioChangeI = async (event) =>{
 
   return (
     <div>
+      <div className="addAppBtn1">
       <button
         type="button"
         onClick={showModal}
+        className="addAppBtn"
       >
         <span role="img" aria-label="close">
           Add new application
         </span>
       </button>
+      </div>
 
 
       {applications ? (
@@ -314,7 +317,7 @@ const handleRadioChangeI = async (event) =>{
     <br/>
 
 
-    <button type="submit" onClick={handleFormSubmit}>Add application</button>
+    <button type="submit" onClick={handleFormSubmit} className="addAppBtn2" >Add application</button>
     <p>* indicates required field </p>
 </form>
 </div>
