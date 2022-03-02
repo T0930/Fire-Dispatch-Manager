@@ -68,3 +68,21 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const REMOVE_APPLICATION = gql`
+  mutation removeApplication($applicationId: String!){
+     removeApplication(applicationId: $ApplicationId) {
+       _id
+       username
+       email
+        applications {
+          applicationId
+          companyName
+          position
+          dateApplied
+          location
+          description
+        }
+     }
+  }
+`;

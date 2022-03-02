@@ -19,7 +19,7 @@ const client = new ApolloClient({
 
 
 function Dashboard() {
-    const [currentPage, setCurrentPage] = useState('Home');
+    const [currentPage, setCurrentPage] = useState('Login');
  
   
     const handlePageChange = (page) => setCurrentPage(page);
@@ -40,9 +40,6 @@ function Dashboard() {
         </Route>
         <Route exact path="/rejections">
               <Rejections />
-        </Route>
-        <Route exact path="/inactive">
-              <Inactive />
         </Route>
         <Route exact path="/application/:applicationId">
               <Application />
