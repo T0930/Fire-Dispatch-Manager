@@ -6,22 +6,18 @@ import Application from "./pages/Application";
 // import Inactive from "./pages/Inactive";
 import './style.css'
 
-// const App = () => <Dashboard />;
 
-const client = new ApolloClient({
-    uri: '/graphql',
-    cache: new InMemoryCache(),
-  });
+
   
   function App() {
     return (
-      <ApolloProvider client={client}>
+
       <Router>
         
           <Dashboard />
            
       </Router>
-      </ApolloProvider>
+
     );
   }
 
