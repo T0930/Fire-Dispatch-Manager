@@ -32,28 +32,28 @@ function Dashboard() {
 
         <Switch>
           <div>
-        <Route path="/active">
+        <Route exact path="/active">
               <Active />
         </Route>
-        <Route path="/interviews">
+        <Route exact path="/interviews">
               <Interviews />
         </Route>
-        <Route path="/rejections">
+        <Route exact path="/rejections">
               <Rejections />
         </Route>
-        <Route path="/inactive">
+        <Route exact path="/inactive">
               <Inactive />
         </Route>
-        <Route path="/application/:applicationId">
+        <Route exact path="/application/:applicationId">
               <Application />
       </Route>
       <Route exact path="/">
               <Home />
         </Route>
-        <Route path="/Login">
+        <Route exact path="/Login">
               <Login />
         </Route>
-        <Route path="/Signup">
+        <Route exact path="/Signup">
               <Signup />
         </Route>
 
