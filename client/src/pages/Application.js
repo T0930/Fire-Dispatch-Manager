@@ -33,8 +33,8 @@ const Application = () => {
       return <div>Loading...</div>;
     }
     return (
-        <div className="card custom-card-sing-app">
-        <h4 className="card-header text-center">
+        <div className="card custom-card-sing-app ">
+        <h4 className="card-header text-center custom-header">
           {applications.companyName}
         </h4>
         <div className="card-body">
@@ -43,7 +43,7 @@ const Application = () => {
           <p className="card-text"><strong>Date Applied:</strong> {applications.dateApplied} </p>
           <p className="card-text"><strong>Location:</strong> {applications.location} </p>
           <p className="card-text"><strong>Notes:</strong> </p>
-              <div className ="card">
+              <div className ="card note-card">
                 {allNotes.map((note) => (
                           <p className="card-text">{note.noteText} </p>
 
